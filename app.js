@@ -5,7 +5,7 @@ const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const Flash = require("connect-flash");
 const methodOverride = require("method-override");
-
+const PatientRoutes = require('./routers/PatientRoutes')
 const app = express();
 
 const bodyParser = require('body-parser');
