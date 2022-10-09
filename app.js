@@ -51,7 +51,8 @@ const SessionConfig = {
 app.use(session(SessionConfig))
 app.use(Flash())
 
-
+app.use('/Patient', PatientRoutes);
+app.use('/Doctor', DoctorRoutes);
 
 app.use((req, res, next) => {
     res.locals.success = req.flash('success');
@@ -60,6 +61,7 @@ app.use((req, res, next) => {
 
     next();
 })
+
 
 
 app.get("/", (req, res) => {
