@@ -2,4 +2,4 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/', catchAsync(campgrounds.index))
+module.exports = router;

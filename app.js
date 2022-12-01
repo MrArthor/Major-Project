@@ -9,6 +9,9 @@ const ExpressError = require("./utils/ExpressError");
 // const PatientRoutes = require('./routers/PatientRoutes')
 const app = express();
 const GeneralRoutes = require('./routers/GeneralRoutes')
+const DoctorRoutes = require('./routers/DoctorRoutes')
+const PatientRoutes = require('./routers/PatientRoutes')
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -52,8 +55,8 @@ const SessionConfig = {
 app.use(session(SessionConfig))
 app.use(Flash())
 app.use('/', GeneralRoutes)
-    // app.use('/Patient', PatientRoutes);
-    // app.use('/Doctor', DoctorRoutes);
+app.use('/Patient', PatientRoutes);
+app.use('/Doctor', DoctorRoutes);
 
 app.use((req, res, next) => {
     res.locals.success = req.flash('success');
