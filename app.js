@@ -5,9 +5,10 @@ const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const Flash = require("connect-flash");
 const methodOverride = require("method-override");
-const PatientRoutes = require('./routers/PatientRoutes')
+const ExpressError = require("./utils/ExpressError");
+// const PatientRoutes = require('./routers/PatientRoutes')
 const app = express();
-
+const GeneralRoutes = require('./routers/GeneralRoutes')
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
     extended: true
@@ -50,9 +51,9 @@ const SessionConfig = {
 
 app.use(session(SessionConfig))
 app.use(Flash())
-
-app.use('/Patient', PatientRoutes);
-app.use('/Doctor', DoctorRoutes);
+app.use('/', GeneralRoutes)
+    // app.use('/Patient', PatientRoutes);
+    // app.use('/Doctor', DoctorRoutes);
 
 app.use((req, res, next) => {
     res.locals.success = req.flash('success');
@@ -65,6 +66,7 @@ app.use((req, res, next) => {
 
 
 app.get("/", (req, res) => {
+    res.render('General/home-page');
     res.send("home");
 });
 
