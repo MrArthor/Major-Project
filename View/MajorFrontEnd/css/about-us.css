@@ -54,15 +54,6 @@
   width: 355px;
 }
 
-.about-us .ellipse-9 {
-  align-self: center;
-  height: 257px;
-  margin-right: 1.34px;
-  margin-top: 68px;
-  object-fit: cover;
-  width: 260px;
-}
-
 .about-us .flex-row {
   align-items: flex-start;
   display: flex;
@@ -217,23 +208,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.about-us .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.about-us .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

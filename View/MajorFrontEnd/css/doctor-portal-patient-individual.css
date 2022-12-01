@@ -229,15 +229,6 @@
   white-space: nowrap;
 }
 
-.doctor-portal-patient-individual .sur-102 {
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-left: 1.0px;
-  min-width: 57px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-patient-individual .avatar-image-60 {
   align-self: flex-start;
   background-image: url(../img/avatar---image-60@2x.png);
@@ -350,14 +341,6 @@
   height: 56px;
   min-width: 1185px;
   padding: 13px 552px;
-}
-
-.doctor-portal-patient-individual .vitals {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 80px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .doctor-portal-patient-individual .flex-row-3 {
@@ -649,12 +632,6 @@
   width: 405px;
 }
 
-.doctor-portal-patient-individual .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .doctor-portal-patient-individual .vector-container {
   align-items: flex-end;
   display: flex;
@@ -685,23 +662,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.doctor-portal-patient-individual .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.doctor-portal-patient-individual .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

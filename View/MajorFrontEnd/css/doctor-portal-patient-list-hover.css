@@ -145,18 +145,6 @@
   width: 181px;
 }
 
-.doctor-portal-patient-list-hover .rectangle-74 {
-  background: linear-gradient(180deg, rgb(250, 153, 14) 0%, rgba(251.81, 200.93, 128, 0.84) 100%);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #faae4080;
-  height: 62px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 68px;
-}
-
 .doctor-portal-patient-list-hover .patient-list {
   left: 90px;
   letter-spacing: 0;
@@ -228,14 +216,6 @@
   min-width: 1247px;
 }
 
-.doctor-portal-patient-list-hover .greetings {
-  letter-spacing: 0;
-  line-height: 22px;
-  margin-bottom: 14.0px;
-  min-width: 301px;
-  white-space: nowrap;
-}
-
 .doctor-portal-patient-list-hover .bell {
   align-self: flex-end;
   height: 88px;
@@ -262,18 +242,9 @@
   white-space: nowrap;
 }
 
-.doctor-portal-patient-list-hover .sur-102 {
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-left: 1.0px;
-  min-width: 57px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-patient-list-hover .avatar-image-60 {
   align-self: flex-start;
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-31@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -333,14 +304,6 @@
   padding: 13px 220px;
 }
 
-.doctor-portal-patient-list-hover .active-patients {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 199px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-patient-list-hover .overlap-group {
   height: 136px;
   margin-right: 1.0px;
@@ -396,14 +359,6 @@
   margin-top: 6px;
   min-width: 640px;
   padding: 13px 187px;
-}
-
-.doctor-portal-patient-list-hover .scheduled-lab-tests {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 264px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .doctor-portal-patient-list-hover .address-1 {
@@ -512,14 +467,6 @@
   width: 48px;
 }
 
-.doctor-portal-patient-list-hover .sun-19 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 32px;
-  text-align: center;
-}
-
 .doctor-portal-patient-list-hover .cal-pill {
   align-items: flex-end;
   background-color: var(--grey1);
@@ -531,15 +478,6 @@
   padding: 7px 6px;
 }
 
-.doctor-portal-patient-list-hover .ellipse-10 {
-  background-color: var(--bluel2);
-  border: 0px none;
-  border-radius: 17.5px;
-  box-shadow: 0px 4px 10px #a5dbe5;
-  height: 35px;
-  width: 35px;
-}
-
 .doctor-portal-patient-list-hover .flex-col-5 {
   align-items: flex-start;
   display: flex;
@@ -547,14 +485,6 @@
   gap: 28px;
   min-height: 173px;
   width: 48px;
-}
-
-.doctor-portal-patient-list-hover .mon-20 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 46px;
-  text-align: center;
 }
 
 .doctor-portal-patient-list-hover .cal-pill-1 {
@@ -568,31 +498,6 @@
   padding: 6px;
 }
 
-.doctor-portal-patient-list-hover .ellipse-10-1 {
-  background-color: var(--greenl1);
-  border: 0px none;
-  border-radius: 17.5px;
-  box-shadow: 0px 8px 24px #5a8d26cc;
-  height: 35px;
-  width: 35px;
-}
-
-.doctor-portal-patient-list-hover .tue-21 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 30px;
-  text-align: center;
-}
-
-.doctor-portal-patient-list-hover .wed-22 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 34px;
-  text-align: center;
-}
-
 .doctor-portal-patient-list-hover .flex-col-6 {
   align-items: flex-start;
   display: flex;
@@ -603,15 +508,6 @@
   width: 48px;
 }
 
-.doctor-portal-patient-list-hover .thu-23 {
-  letter-spacing: 0;
-  line-height: 20px;
-  margin-left: 4px;
-  min-height: 40px;
-  min-width: 40px;
-  text-align: center;
-}
-
 .doctor-portal-patient-list-hover .flex-col-1 {
   align-items: center;
   display: flex;
@@ -620,22 +516,6 @@
   margin-top: 4px;
   min-height: 169px;
   width: 48px;
-}
-
-.doctor-portal-patient-list-hover .fri-24 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 24px;
-  text-align: center;
-}
-
-.doctor-portal-patient-list-hover .sat-25 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 30px;
-  text-align: center;
 }
 
 .doctor-portal-patient-list-hover .vector-5 {
@@ -668,14 +548,6 @@
   height: 56px;
   min-width: 1185px;
   padding: 13px 552px;
-}
-
-.doctor-portal-patient-list-hover .vitals {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 80px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .doctor-portal-patient-list-hover .overlap-group-container-2 {
@@ -807,12 +679,6 @@
   width: 405px;
 }
 
-.doctor-portal-patient-list-hover .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .doctor-portal-patient-list-hover .vector-container {
   align-items: flex-end;
   display: flex;
@@ -843,23 +709,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.doctor-portal-patient-list-hover .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.doctor-portal-patient-list-hover .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

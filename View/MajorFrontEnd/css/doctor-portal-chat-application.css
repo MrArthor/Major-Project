@@ -228,18 +228,9 @@
   white-space: nowrap;
 }
 
-.doctor-portal-chat-application .sur-102 {
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-left: 1.0px;
-  min-width: 57px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-chat-application .avatar-image-60 {
   align-self: flex-start;
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-27@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -279,42 +270,6 @@
   width: 1232px;
 }
 
-.doctor-portal-chat-application .rectangle-81 {
-  background-color: var(--grey1);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px #d0d3d4;
-  height: 45px;
-  left: 75px;
-  position: absolute;
-  top: 248px;
-  width: 260px;
-}
-
-.doctor-portal-chat-application .rectangle-87 {
-  background-color: var(--grey1);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px #d0d3d4;
-  height: 45px;
-  left: 892px;
-  position: absolute;
-  top: 584px;
-  width: 260px;
-}
-
-.doctor-portal-chat-application .rectangle-89 {
-  background-color: var(--grey1);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px #d0d3d4;
-  height: 95px;
-  left: 31px;
-  position: absolute;
-  top: 825px;
-  width: 1173px;
-}
-
 .doctor-portal-chat-application .rectangle-84 {
   background-color: var(--cotton-seed);
   border: 1px none;
@@ -322,18 +277,6 @@
   box-shadow: 0px 8px 20px #968c8c87;
   height: 80px;
   left: 75px;
-  position: absolute;
-  top: 370px;
-  width: 80px;
-}
-
-.doctor-portal-chat-application .rectangle-85 {
-  background-color: var(--cotton-seed);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px #968c8c87;
-  height: 80px;
-  left: 171px;
   position: absolute;
   top: 370px;
   width: 80px;
@@ -351,30 +294,6 @@
   width: 80px;
 }
 
-.doctor-portal-chat-application .rectangle-83 {
-  background-color: var(--grey1);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px #d0d3d4;
-  height: 45px;
-  left: 75px;
-  position: absolute;
-  top: 309px;
-  width: 415px;
-}
-
-.doctor-portal-chat-application .rectangle-88 {
-  background-color: var(--grey1);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px #d0d3d4;
-  height: 45px;
-  left: 738px;
-  position: absolute;
-  top: 644px;
-  width: 415px;
-}
-
 .doctor-portal-chat-application .alley {
   left: 115px;
   letter-spacing: 0;
@@ -382,121 +301,6 @@
   position: absolute;
   text-align: center;
   top: 41px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .alley-1 {
-  left: 79px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 196px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .you {
-  left: 1106px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 509px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .active {
-  left: 124px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 74px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl {
-  left: 83px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 256px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-1 {
-  left: 900px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 592px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .write-a-message {
-  color: #958b8b;
-  font-family: var(--font-family-open_sans);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  left: 44px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 834px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-2 {
-  left: 83px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 317px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-3 {
-  left: 746px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 652px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-4 {
-  left: 160px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 317px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-5 {
-  left: 823px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 652px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-6 {
-  left: 237px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 317px;
-  white-space: nowrap;
-}
-
-.doctor-portal-chat-application .scjs-sl-nl-7 {
-  left: 900px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  top: 652px;
   white-space: nowrap;
 }
 
@@ -513,7 +317,7 @@
 }
 
 .doctor-portal-chat-application .avatar-image-60-1 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-28@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -527,7 +331,7 @@
 }
 
 .doctor-portal-chat-application .avatar-image-60-2 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-29@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -541,7 +345,7 @@
 }
 
 .doctor-portal-chat-application .avatar-image-60-3 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-30@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -553,17 +357,6 @@
   top: 498px;
   transform: rotate(180deg);
   width: 51px;
-}
-
-.doctor-portal-chat-application .ellipse-11 {
-  background-color: var(--greenl2);
-  border: 0px none;
-  border-radius: 3px;
-  height: 6px;
-  left: 115px;
-  position: absolute;
-  top: 86px;
-  width: 6px;
 }
 
 .doctor-portal-chat-application .image {
@@ -588,22 +381,6 @@
   position: absolute;
   top: 398px;
   width: 24px;
-}
-
-.doctor-portal-chat-application .smile {
-  height: 17px;
-  left: 1061px;
-  position: absolute;
-  top: 842px;
-  width: 17px;
-}
-
-.doctor-portal-chat-application .send {
-  height: 12px;
-  left: 1154px;
-  position: absolute;
-  top: 844px;
-  width: 15px;
 }
 
 .doctor-portal-chat-application .place {
@@ -655,12 +432,6 @@
   width: 405px;
 }
 
-.doctor-portal-chat-application .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .doctor-portal-chat-application .vector-container {
   align-items: flex-end;
   display: flex;
@@ -691,23 +462,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.doctor-portal-chat-application .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.doctor-portal-chat-application .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

@@ -44,14 +44,6 @@
   padding: 13px 533px;
 }
 
-.patient-portal-chat-app-doc-vol .chat-with {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 128px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-chat-app-doc-vol .overlap-group-container {
   align-items: flex-start;
   display: flex;
@@ -118,16 +110,6 @@
   width: 121px;
 }
 
-.patient-portal-chat-app-doc-vol .start-chat {
-  left: 131px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 67px;
-  white-space: nowrap;
-}
-
 .patient-portal-chat-app-doc-vol .overlap-group7 {
   height: 125px;
   position: relative;
@@ -167,16 +149,6 @@
   width: 121px;
 }
 
-.patient-portal-chat-app-doc-vol .start-chat-1 {
-  left: 161px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 67px;
-  white-space: nowrap;
-}
-
 .patient-portal-chat-app-doc-vol .volunteer-1 {
   height: 112px;
   left: 5px;
@@ -199,15 +171,8 @@
   top: 6px;
 }
 
-.patient-portal-chat-app-doc-vol .in-patient {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 54px;
-  min-width: 231px;
-}
-
 .patient-portal-chat-app-doc-vol .avatar-image-60 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-19@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -379,12 +344,6 @@
   width: 405px;
 }
 
-.patient-portal-chat-app-doc-vol .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .patient-portal-chat-app-doc-vol .vector-container {
   align-items: flex-end;
   display: flex;
@@ -415,23 +374,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.patient-portal-chat-app-doc-vol .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.patient-portal-chat-app-doc-vol .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

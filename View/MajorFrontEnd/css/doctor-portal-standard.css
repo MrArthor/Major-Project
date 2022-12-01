@@ -132,7 +132,7 @@
   padding: 11px;
 }
 
-.doctor-portal-standard .icon-home {
+.doctor-portal-standard .home {
   height: 28px;
   width: 33px;
 }
@@ -145,7 +145,7 @@
   width: 41px;
 }
 
-.doctor-portal-standard .icon-calendar {
+.doctor-portal-standard .calendar {
   cursor: pointer;
   height: 38px;
   margin-right: 1.0px;
@@ -169,7 +169,7 @@
   width: 33px;
 }
 
-.doctor-portal-standard .icon-settings {
+.doctor-portal-standard .setting {
   cursor: pointer;
   height: 31px;
   margin-right: 3.0px;
@@ -202,14 +202,6 @@
   min-width: 1247px;
 }
 
-.doctor-portal-standard .greetings {
-  letter-spacing: 0;
-  line-height: 22px;
-  margin-bottom: 14.0px;
-  min-width: 301px;
-  white-space: nowrap;
-}
-
 .doctor-portal-standard .bell {
   align-self: flex-end;
   height: 88px;
@@ -236,18 +228,9 @@
   white-space: nowrap;
 }
 
-.doctor-portal-standard .sur-102 {
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-left: 1.0px;
-  min-width: 57px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-standard .avatar-image-60 {
   align-self: flex-start;
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-2@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -305,14 +288,6 @@
   margin-top: 6px;
   min-width: 640px;
   padding: 13px 220px;
-}
-
-.doctor-portal-standard .active-patients {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 199px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .doctor-portal-standard .overlap-group {
@@ -373,14 +348,6 @@
   padding: 13px 187px;
 }
 
-.doctor-portal-standard .scheduled-lab-tests {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 264px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-standard .vector-3 {
   height: 60px;
   left: 574px;
@@ -436,7 +403,7 @@
   width: 487px;
 }
 
-.doctor-portal-standard .calendar {
+.doctor-portal-standard .calendar-1 {
   left: 202px;
   letter-spacing: 0;
   line-height: 28px;
@@ -474,7 +441,7 @@
   width: 20px;
 }
 
-.doctor-portal-standard .calendar-1 {
+.doctor-portal-standard .calendar-2 {
   align-items: flex-start;
   border: 1px none;
   display: flex;
@@ -497,14 +464,6 @@
   width: 48px;
 }
 
-.doctor-portal-standard .sun-19 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 32px;
-  text-align: center;
-}
-
 .doctor-portal-standard .cal-pill {
   align-items: flex-end;
   background-color: var(--grey1);
@@ -517,15 +476,6 @@
   padding: 7px 6px;
 }
 
-.doctor-portal-standard .ellipse-10 {
-  background-color: var(--bluel2);
-  border: 0px none;
-  border-radius: 17.5px;
-  box-shadow: 0px 4px 10px #a5dbe5;
-  height: 35px;
-  width: 35px;
-}
-
 .doctor-portal-standard .flex-col-5 {
   align-items: flex-start;
   display: flex;
@@ -533,14 +483,6 @@
   gap: 28px;
   min-height: 173px;
   width: 48px;
-}
-
-.doctor-portal-standard .mon-20 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 46px;
-  text-align: center;
 }
 
 .doctor-portal-standard .cal-pill-1 {
@@ -555,31 +497,6 @@
   padding: 6px;
 }
 
-.doctor-portal-standard .ellipse-10-1 {
-  background-color: var(--greenl1);
-  border: 0px none;
-  border-radius: 17.5px;
-  box-shadow: 0px 8px 24px #5a8d26cc;
-  height: 35px;
-  width: 35px;
-}
-
-.doctor-portal-standard .tue-21 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 30px;
-  text-align: center;
-}
-
-.doctor-portal-standard .wed-22 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 34px;
-  text-align: center;
-}
-
 .doctor-portal-standard .flex-col-6 {
   align-items: flex-start;
   display: flex;
@@ -590,15 +507,6 @@
   width: 48px;
 }
 
-.doctor-portal-standard .thu-23 {
-  letter-spacing: 0;
-  line-height: 20px;
-  margin-left: 4px;
-  min-height: 40px;
-  min-width: 40px;
-  text-align: center;
-}
-
 .doctor-portal-standard .flex-col-1 {
   align-items: center;
   display: flex;
@@ -607,33 +515,6 @@
   margin-top: 4px;
   min-height: 169px;
   width: 48px;
-}
-
-.doctor-portal-standard .fri-24 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 24px;
-  text-align: center;
-}
-
-.doctor-portal-standard .sat-25 {
-  letter-spacing: 0;
-  line-height: 20px;
-  min-height: 40px;
-  min-width: 30px;
-  text-align: center;
-}
-
-.doctor-portal-standard .cal-pill-2 {
-  align-items: flex-end;
-  background-color: var(--grey1);
-  border-radius: 30px;
-  box-shadow: 0px 15px 24px #00000026;
-  display: flex;
-  height: 105px;
-  min-width: 48px;
-  padding: 7px 6px;
 }
 
 .doctor-portal-standard .vector-6 {
@@ -667,14 +548,6 @@
   height: 56px;
   min-width: 1185px;
   padding: 13px 552px;
-}
-
-.doctor-portal-standard .vitals {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 80px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .doctor-portal-standard .overlap-group-container-2 {
@@ -834,13 +707,7 @@
   width: 405px;
 }
 
-.doctor-portal-standard .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
-.doctor-portal-standard .flex-row-5 {
+.doctor-portal-standard .vector-container {
   align-items: flex-end;
   display: flex;
   margin-left: 7px;
@@ -852,13 +719,13 @@
   width: 49px;
 }
 
-.doctor-portal-standard .icon-facebook {
+.doctor-portal-standard .vector-12 {
   height: 56px;
   margin-left: 43px;
   width: 56px;
 }
 
-.doctor-portal-standard .icon-twitter {
+.doctor-portal-standard .vector-13 {
   height: 52px;
   margin-left: 41px;
   width: 64px;
@@ -870,23 +737,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.doctor-portal-standard .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.doctor-portal-standard .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

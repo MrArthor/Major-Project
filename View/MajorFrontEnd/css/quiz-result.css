@@ -105,7 +105,7 @@
 .quiz-result .quiz-result-1 {
   color: var(--grey1);
   font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   font-weight: 900;
   letter-spacing: 0;
   line-height: normal;
@@ -116,7 +116,7 @@
 .quiz-result .chances-of-you-requiring-treatment {
   color: var(--blued2);
   font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   font-weight: 700;
   letter-spacing: 0;
   line-height: normal;
@@ -302,23 +302,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.quiz-result .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.quiz-result .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

@@ -32,15 +32,8 @@
   top: 6px;
 }
 
-.patient-portal-feedback .in-patient {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 54px;
-  min-width: 231px;
-}
-
 .patient-portal-feedback .avatar-image-60 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-13@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -212,12 +205,6 @@
   width: 405px;
 }
 
-.patient-portal-feedback .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .patient-portal-feedback .vector-container {
   align-items: flex-end;
   display: flex;
@@ -252,23 +239,6 @@
   width: 149px;
 }
 
-.patient-portal-feedback .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.patient-portal-feedback .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
-  min-height: 330px;
-  width: 149px;
-}
-
 .patient-portal-feedback .overlap-group4 {
   align-items: flex-start;
   background-color: var(--grey);
@@ -282,13 +252,6 @@
   padding: 19px 17px;
   position: absolute;
   top: 168px;
-}
-
-.patient-portal-feedback .pavan-772 {
-  align-self: center;
-  height: 534px;
-  margin-bottom: 13.82px;
-  width: 342px;
 }
 
 .patient-portal-feedback .flex-col-1 {
@@ -312,36 +275,6 @@
   padding: 13px 282px;
 }
 
-.patient-portal-feedback .feedback-form {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 191px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-feedback .need-support {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-top: 65px;
-  min-width: 215px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-feedback .contact-us-if-you-ne {
-  color: var(--black);
-  font-family: var(--font-family-open_sans);
-  font-size: var(--font-size-s);
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-top: 9px;
-  min-width: 401px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-feedback .full-name {
   letter-spacing: 0;
   line-height: 28px;
@@ -358,14 +291,6 @@
   height: 45px;
   margin-top: 11px;
   width: 479px;
-}
-
-.patient-portal-feedback .flex-col-item {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 6px;
-  margin-top: 43px;
-  white-space: nowrap;
 }
 
 .patient-portal-feedback .rectangle-82 {

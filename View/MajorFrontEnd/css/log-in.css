@@ -108,19 +108,6 @@
   z-index: 5;
 }
 
-.log-in .rectangle-5 {
-  align-self: center;
-  background-color: var(--grey);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #a5dbe58c;
-  height: 89px;
-  margin-left: 13.0px;
-  margin-top: 11px;
-  width: 1229px;
-  z-index: 3;
-}
-
 .log-in .password {
   letter-spacing: 0;
   line-height: normal;
@@ -128,19 +115,6 @@
   margin-top: 85px;
   min-height: 38px;
   z-index: 6;
-}
-
-.log-in .rectangle-12 {
-  align-self: center;
-  background-color: var(--grey);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #a5dbe58c;
-  height: 89px;
-  margin-left: 13.0px;
-  margin-top: 11px;
-  width: 1229px;
-  z-index: 4;
 }
 
 .log-in .overlap-group2 {
@@ -234,23 +208,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.log-in .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.log-in .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

@@ -32,15 +32,8 @@
   top: 6px;
 }
 
-.patient-portal-billing .in-patient {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 54px;
-  min-width: 231px;
-}
-
 .patient-portal-billing .avatar-image-60 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-12@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -212,12 +205,6 @@
   width: 405px;
 }
 
-.patient-portal-billing .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .patient-portal-billing .vector-container {
   align-items: flex-end;
   display: flex;
@@ -252,23 +239,6 @@
   width: 149px;
 }
 
-.patient-portal-billing .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.patient-portal-billing .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
-  min-height: 330px;
-  width: 149px;
-}
-
 .patient-portal-billing .under-construction {
   height: 363px;
   left: 524px;
@@ -278,10 +248,6 @@
 }
 
 .patient-portal-billing .surname {
-  color: #b4adad;
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xl);
-  font-weight: 900;
   left: 278px;
   letter-spacing: 0;
   line-height: 28px;

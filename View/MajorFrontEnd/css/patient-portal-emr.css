@@ -224,13 +224,6 @@
   padding: 0 42px;
 }
 
-.patient-portal-emr .in-patient {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 54px;
-  min-width: 231px;
-}
-
 .patient-portal-emr .overlap-group7 {
   border-radius: 10px;
   height: 1297px;
@@ -980,7 +973,7 @@
 
 .patient-portal-emr .avatar-image-60 {
   align-self: flex-start;
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-11@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -1015,14 +1008,6 @@
   justify-content: flex-end;
   min-width: 861px;
   padding: 21px 390px;
-}
-
-.patient-portal-emr .vitals {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 80px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .patient-portal-emr .overlap-group-container {
@@ -1360,12 +1345,6 @@
   width: 405px;
 }
 
-.patient-portal-emr .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .patient-portal-emr .vector-container {
   align-items: flex-end;
   display: flex;
@@ -1396,23 +1375,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.patient-portal-emr .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.patient-portal-emr .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

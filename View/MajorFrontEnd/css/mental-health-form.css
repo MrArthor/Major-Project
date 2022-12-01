@@ -93,7 +93,7 @@
   align-self: center;
   color: var(--orange);
   font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   font-weight: 900;
   letter-spacing: 0;
   line-height: normal;
@@ -101,28 +101,6 @@
   min-height: 75px;
   min-width: 1008px;
   z-index: 2;
-}
-
-.mental-health-form .blood-group {
-  letter-spacing: 0;
-  line-height: normal;
-  margin-left: 112px;
-  margin-top: 102px;
-  min-height: 38px;
-  z-index: 11;
-}
-
-.mental-health-form .rectangle-5 {
-  align-self: center;
-  background-color: var(--grey);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #a5dbe58c;
-  height: 89px;
-  margin-left: 13.0px;
-  margin-top: 11px;
-  width: 1229px;
-  z-index: 3;
 }
 
 .mental-health-form .blood-pressure {
@@ -134,19 +112,6 @@
   z-index: 12;
 }
 
-.mental-health-form .rectangle-12 {
-  align-self: center;
-  background-color: var(--grey);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #a5dbe58c;
-  height: 89px;
-  margin-left: 13.0px;
-  margin-top: 11px;
-  width: 1229px;
-  z-index: 4;
-}
-
 .mental-health-form .pulse-rate {
   letter-spacing: 0;
   line-height: normal;
@@ -154,19 +119,6 @@
   margin-top: 83px;
   min-height: 38px;
   z-index: 13;
-}
-
-.mental-health-form .rectangle-165 {
-  align-self: center;
-  background-color: var(--grey);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #a5dbe58c;
-  height: 89px;
-  margin-left: 13.0px;
-  margin-top: 11px;
-  width: 1229px;
-  z-index: 5;
 }
 
 .mental-health-form .height {
@@ -200,28 +152,6 @@
   z-index: 15;
 }
 
-.mental-health-form .rectangle-170 {
-  align-self: center;
-  background-color: var(--grey);
-  border: 1px none;
-  border-radius: 10px;
-  box-shadow: 0px 8px 24px #a5dbe58c;
-  height: 89px;
-  margin-right: 1.0px;
-  margin-top: 11px;
-  width: 1229px;
-  z-index: 7;
-}
-
-.mental-health-form .pre-history {
-  letter-spacing: 0;
-  line-height: normal;
-  margin-left: 112px;
-  margin-top: 75px;
-  min-height: 38px;
-  z-index: 16;
-}
-
 .mental-health-form .rectangle-166 {
   align-self: center;
   background-color: var(--grey);
@@ -235,15 +165,6 @@
   z-index: 8;
 }
 
-.mental-health-form .condition {
-  letter-spacing: 0;
-  line-height: normal;
-  margin-left: 112px;
-  margin-top: 83px;
-  min-height: 38px;
-  z-index: 18;
-}
-
 .mental-health-form .rectangle-167 {
   align-self: center;
   background-color: var(--grey);
@@ -255,15 +176,6 @@
   margin-top: 11px;
   width: 1229px;
   z-index: 10;
-}
-
-.mental-health-form .prferred-doctor {
-  letter-spacing: 0;
-  line-height: normal;
-  margin-left: 112px;
-  margin-top: 81px;
-  min-height: 38px;
-  z-index: 17;
 }
 
 .mental-health-form .rectangle-168 {
@@ -288,18 +200,6 @@
   position: relative;
   width: 274px;
   z-index: 19;
-}
-
-.mental-health-form .rectangle-164 {
-  background-color: var(--blued2);
-  border: 1px none;
-  border-radius: 40px;
-  cursor: pointer;
-  height: 72px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 274px;
 }
 
 .mental-health-form .submit {
@@ -381,23 +281,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.mental-health-form .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.mental-health-form .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

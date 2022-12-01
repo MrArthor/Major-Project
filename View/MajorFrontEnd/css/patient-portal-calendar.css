@@ -121,39 +121,12 @@
   white-space: nowrap;
 }
 
-.patient-portal-calendar .number-1 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 1.0px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .flex-col-1 {
   align-items: center;
   display: flex;
   flex-direction: column;
   min-height: 303px;
   width: 38px;
-}
-
-.patient-portal-calendar .mon {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-right: 1.0px;
-  min-width: 37px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-2 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-top: 27px;
-  min-width: 10px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .patient-portal-calendar .overlap-group8 {
@@ -168,34 +141,6 @@
   padding: 4px 9px;
 }
 
-.patient-portal-calendar .number-3 {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-5 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 1.0px;
-  margin-top: 22px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-6 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 1.0px;
-  margin-top: 27px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .flex-col-2 {
   align-items: center;
   display: flex;
@@ -204,14 +149,6 @@
   margin-left: 31px;
   min-height: 248px;
   width: 30px;
-}
-
-.patient-portal-calendar .tue {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 30px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .patient-portal-calendar .flex-col-3 {
@@ -224,14 +161,6 @@
   width: 34px;
 }
 
-.patient-portal-calendar .wed {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 34px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .flex-col-4 {
   align-items: center;
   display: flex;
@@ -239,35 +168,6 @@
   margin-left: 32px;
   min-height: 248px;
   width: 37px;
-}
-
-.patient-portal-calendar .thu {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 1.0px;
-  min-width: 32px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-7 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 1.0px;
-  margin-top: 27px;
-  min-width: 10px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-8 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 2.0px;
-  margin-top: 27px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .patient-portal-calendar .overlap-group9 {
@@ -282,16 +182,6 @@
   padding: 4px 8px;
 }
 
-.patient-portal-calendar .number-9 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 2.0px;
-  margin-top: 22px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .flex-col-5 {
   align-items: center;
   display: flex;
@@ -301,14 +191,6 @@
   width: 24px;
 }
 
-.patient-portal-calendar .fri {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 24px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .flex-col-6 {
   align-items: center;
   display: flex;
@@ -316,32 +198,6 @@
   gap: 27px;
   min-height: 248px;
   width: 30px;
-}
-
-.patient-portal-calendar .sat {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 30px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-10 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 2.0px;
-  min-width: 10px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .number-4 {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 3.0px;
-  min-width: 19px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .patient-portal-calendar .flex-col-7 {
@@ -388,18 +244,6 @@
   padding: 8px 11px;
 }
 
-.patient-portal-calendar .today {
-  color: var(--blued3);
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-m);
-  font-weight: 900;
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 77px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .overlap-group17 {
   align-self: flex-end;
   height: 47px;
@@ -418,20 +262,6 @@
   white-space: nowrap;
 }
 
-.patient-portal-calendar .thursday {
-  color: var(--black);
-  font-family: var(--font-family-roboto);
-  font-size: var(--font-size-xxs);
-  font-weight: 500;
-  left: 2px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 19px;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .overlap-group25 {
   align-items: flex-start;
   background-color: var(--blued2);
@@ -443,20 +273,6 @@
   margin-left: 191px;
   min-width: 222px;
   padding: 13px 12px;
-}
-
-.patient-portal-calendar .add-activity {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 159px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.patient-portal-calendar .add {
-  align-self: center;
-  height: 20px;
-  width: 20px;
 }
 
 .patient-portal-calendar .flex-row-4 {
@@ -487,11 +303,6 @@
   padding: 7px 8px;
 }
 
-.patient-portal-calendar .edit {
-  height: 7px;
-  width: 7px;
-}
-
 .patient-portal-calendar .overlap-group24 {
   align-items: flex-end;
   background: linear-gradient(180deg, rgb(114.05, 178.5, 48.34) 0%, rgba(192.59, 246.5, 137.63, 0.87) 100%);
@@ -514,16 +325,6 @@
   width: 82px;
 }
 
-.patient-portal-calendar .appointment {
-  left: 0;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .dr-cary-acquiger {
   left: 7px;
   letter-spacing: 0;
@@ -532,12 +333,6 @@
   text-align: center;
   top: 16px;
   white-space: nowrap;
-}
-
-.patient-portal-calendar .edit-1 {
-  height: 7px;
-  margin-right: 9px;
-  width: 7px;
 }
 
 .patient-portal-calendar .overlap-group29 {
@@ -578,24 +373,6 @@
   gap: 73px;
   height: 544px;
   min-width: 225px;
-}
-
-.patient-portal-calendar .text-container {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 120px;
-  margin-bottom: 2.0px;
-  min-height: 472px;
-  width: 52px;
-}
-
-.patient-portal-calendar .text {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 52px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .patient-portal-calendar .overlap-group-container {
@@ -666,16 +443,6 @@
   width: 100px;
 }
 
-.patient-portal-calendar .appointment-1 {
-  left: 0;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  white-space: nowrap;
-}
-
 .patient-portal-calendar .overlap-group2 {
   align-items: flex-end;
   background-color: var(--grey1);
@@ -695,16 +462,6 @@
   height: 544px;
   margin-left: 39px;
   min-width: 240px;
-}
-
-.patient-portal-calendar .appointment-2 {
-  left: 0;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  white-space: nowrap;
 }
 
 .patient-portal-calendar .overlap-group-3 {
@@ -733,15 +490,8 @@
   top: 6px;
 }
 
-.patient-portal-calendar .in-patient {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 54px;
-  min-width: 231px;
-}
-
 .patient-portal-calendar .avatar-image-60 {
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-22@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -914,12 +664,6 @@
   width: 405px;
 }
 
-.patient-portal-calendar .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .patient-portal-calendar .vector-container {
   align-items: flex-end;
   display: flex;
@@ -950,23 +694,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.patient-portal-calendar .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.patient-portal-calendar .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

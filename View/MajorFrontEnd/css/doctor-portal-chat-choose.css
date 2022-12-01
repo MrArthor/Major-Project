@@ -228,18 +228,9 @@
   white-space: nowrap;
 }
 
-.doctor-portal-chat-choose .sur-102 {
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-left: 1.0px;
-  min-width: 57px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-chat-choose .avatar-image-60 {
   align-self: flex-start;
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-24@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -271,14 +262,6 @@
   height: 56px;
   min-width: 1194px;
   padding: 13px 533px;
-}
-
-.doctor-portal-chat-choose .chat-with {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 128px;
-  text-align: center;
-  white-space: nowrap;
 }
 
 .doctor-portal-chat-choose .overlap-group-container {
@@ -340,16 +323,6 @@
   width: 121px;
 }
 
-.doctor-portal-chat-choose .start-chat {
-  left: 131px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 67px;
-  white-space: nowrap;
-}
-
 .doctor-portal-chat-choose .vector-1 {
   height: 107px;
   left: 0;
@@ -389,16 +362,6 @@
   position: absolute;
   top: 66px;
   width: 121px;
-}
-
-.doctor-portal-chat-choose .start-chat-1 {
-  left: 161px;
-  letter-spacing: 0;
-  line-height: 28px;
-  position: absolute;
-  text-align: center;
-  top: 67px;
-  white-space: nowrap;
 }
 
 .doctor-portal-chat-choose .vector-2 {
@@ -444,12 +407,6 @@
   width: 405px;
 }
 
-.doctor-portal-chat-choose .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .doctor-portal-chat-choose .vector-container {
   align-items: flex-end;
   display: flex;
@@ -480,23 +437,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.doctor-portal-chat-choose .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.doctor-portal-chat-choose .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }

@@ -228,18 +228,9 @@
   white-space: nowrap;
 }
 
-.doctor-portal-feedback .sur-102 {
-  letter-spacing: 0;
-  line-height: 15px;
-  margin-left: 1.0px;
-  min-width: 57px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-feedback .avatar-image-60 {
   align-self: flex-start;
-  background-image: url(../img/avatar---image-60@2x.png);
+  background-image: url(../img/avatar---image-60-23@2x.png);
   background-position: 50% 50%;
   background-size: cover;
   border: 1px none;
@@ -263,13 +254,6 @@
   padding: 19px 17px;
 }
 
-.doctor-portal-feedback .pavan-772 {
-  align-self: center;
-  height: 534px;
-  margin-bottom: 13.82px;
-  width: 342px;
-}
-
 .doctor-portal-feedback .flex-col-2 {
   align-items: flex-start;
   display: flex;
@@ -291,36 +275,6 @@
   padding: 13px 282px;
 }
 
-.doctor-portal-feedback .feedback-form {
-  letter-spacing: 0;
-  line-height: 28px;
-  min-width: 191px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.doctor-portal-feedback .need-support {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-top: 65px;
-  min-width: 215px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.doctor-portal-feedback .contact-us-if-you-ne {
-  color: var(--black);
-  font-family: var(--font-family-open_sans);
-  font-size: var(--font-size-s);
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-top: 9px;
-  min-width: 401px;
-  text-align: center;
-  white-space: nowrap;
-}
-
 .doctor-portal-feedback .full-name {
   letter-spacing: 0;
   line-height: 28px;
@@ -337,14 +291,6 @@
   height: 45px;
   margin-top: 11px;
   width: 479px;
-}
-
-.doctor-portal-feedback .flex-col-item {
-  letter-spacing: 0;
-  line-height: 28px;
-  margin-left: 6px;
-  margin-top: 43px;
-  white-space: nowrap;
 }
 
 .doctor-portal-feedback .rectangle-84 {
@@ -424,12 +370,6 @@
   width: 405px;
 }
 
-.doctor-portal-feedback .ml-care-1 {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 113px;
-}
-
 .doctor-portal-feedback .vector-container {
   align-items: flex-end;
   display: flex;
@@ -460,23 +400,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  min-height: 330px;
-  width: 149px;
-}
-
-.doctor-portal-feedback .lorem-ipsum {
-  letter-spacing: 0;
-  line-height: normal;
-  min-height: 29px;
-}
-
-.doctor-portal-feedback .lorem-ipsum-container-1 {
-  align-items: flex-start;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 19.0px;
   min-height: 330px;
   width: 149px;
 }
