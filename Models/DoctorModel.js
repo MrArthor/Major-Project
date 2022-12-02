@@ -8,7 +8,7 @@ const DoctorSchema = new Schema({
     UserDetails: {
         type: Schema.Types.ObjectId,
         ref: 'UserModel',
-        required: true
+
     },
     Experience: Number,
     Specialization: String,

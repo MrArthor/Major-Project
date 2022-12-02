@@ -28,9 +28,22 @@ router.get('/log-in', (req, res) => {
     res.render('General/log-in', { Title, CssLink });
 });
 
+router.post('/log-in', (req, res) => {
+    const Title = "Log In";
+    const CssLink = 'log-in'
+    console.log(req.body.Signin);
+    res.send(req.body.Signin);
+})
 router.get('/sign-up', (req, res) => {
     const Title = "Sign Up";
-    res.render('General/sign-up', { Title });
+    var CssLink = 'sign-up'
+    res.render('General/sign-up', { Title, CssLink });
+});
+router.post('/sign-up', (req, res) => {
+    const Title = "Sign Up";
+    const temp = req.body.Signup;
+    console.log(temp);
+    res.send('Sign Up');
 });
 
 module.exports = router;

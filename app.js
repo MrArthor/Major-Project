@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 
 
-mongoose.connect("mongodb://localhost:27017/", {
+mongoose.connect("mongodb://localhost:27017/MajorProject", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -75,15 +75,12 @@ app.get("/", (req, res) => {
 
 });
 
-app.all("*", (req, res, next) => {
-    next(new ExpressError("What The Fuck Happened  Now??????", 404));
-});
 
-app.use((err, req, res, next) => {
-    const { statusCode = 500 } = err;
-    if (!err.message) err.message = "Oh No, Something Went Wrong!";
-    res.status(statusCode).render("error", { err });
-});
+// app.use((err, req, res, next) => {
+//     const { statusCode = 500 } = err;
+//     if (!err.message) err.message = "Oh No, Something Went Wrong!";
+//     res.status(statusCode).render("error", { err });
+// });
 
 app.listen(9483, () => {
     console.log("Serving on port 9483");
