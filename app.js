@@ -69,8 +69,10 @@ app.use((req, res, next) => {
 
 
 app.get("/", (req, res) => {
-    res.render('General/home-page');
-    res.send("home");
+    const Title = "Home-Page";
+    const CssLink = 'home-page'
+    res.render('General/home-page', { Title, CssLink });
+
 });
 
 app.all("*", (req, res, next) => {
