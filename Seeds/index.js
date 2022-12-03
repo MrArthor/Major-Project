@@ -24,7 +24,10 @@ const seedDB = async() => {
             //YOUR USER ID
             Experience: Math.floor(Math.random() * 10) + 1,
             Specialization: Data[i].Qualification,
-            NoOfPatients: Data[i].noofpatient,
+            NoOfPatients: Data[i].noofpatient % 20,
+            Temperature: Data[i].noofpatient % 100,
+            PulseRate: Data[i].noofpatient % 200,
+            TestsScheduled: Data[i].noofpatient % 30,
             Department: Data[i].Qualification,
             BriefDescription: Data[i].Qualification,
             Domain: Data[i].Domain

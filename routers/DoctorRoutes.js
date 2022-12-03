@@ -1,12 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const DoctorModel = require('../Models/DoctorModel');
+const PatientModel = require('../Models/PatientModel');
+const calendar = require('node-calendar');
+const cal = new calendar.Calendar(calendar.SUNDAY);
+
 router.get('/:id', async(req, res) => {
     const Title = "Home";
     const CssLink = 'Doctor-Portal';
     const { id } = req.params;
+    const date = new Date();
+    const Month = date.getMonth();
+    const Year = date.getFullYear();
+    const MonthName = calendar.month_name[Month]
     const Doctor = await DoctorModel.findById(id);
-    res.render('Doctor/Doctor-Portal', { Title, CssLink, Doctor });
+    res.render('Doctor/Doctor-Portal', { Title, CssLink, Doctor, MonthName, Year });
 });
 
 router.get('/:id/vitals-edit-form-doc', async(req, res) => {
@@ -22,7 +30,13 @@ router.post('/:id/vitals-edit-form-doc', async(req, res) => {
     const CssLink = 'Vitals-Edit-Form-Doc';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
-
+    console.log(Doctor)
+    console.log(req.body);
+    const { temp, pulse } = req.body;
+    Doctor.Temperature = temp;
+    Doctor.PulseRate = pulse;
+    await Doctor.save();
+    console.log(Doctor)
     res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor });
 });
 

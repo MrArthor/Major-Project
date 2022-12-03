@@ -17,6 +17,9 @@ const DoctorSchema = new Schema({
     Department: String,
     BriefDescription: String,
     Domain: String,
+    Temperature: Number,
+    PulseRate: Number,
+    TestsScheduled: Number,
     Patients: [{
         type: Schema.Types.ObjectId,
         ref: 'PatientModel',

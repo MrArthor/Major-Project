@@ -18,18 +18,18 @@
                     </a>
                 </div>
             </div>
-            <form action="">
+            <form action="/Doctor/<%=Doctor._id %>/vitals-edit-form-doc" method="post">
                 <div class="edit-vitals roboto-black-metallic-seaweed-64px">EDIT VITALS</div>
                 <div class="temperature roboto-bold-scooter-32px">TEMPERATURE</div>
-                <input class="rectangle-5"></input>
+                <input type="number" name="vital[temp]" class="rectangle-5"></input>
                 <div class="pulse-rate roboto-bold-scooter-32px">PULSE RATE</div>
-                <input class="rectangle-12"></input>
-                <div class="overlap-group2">
+                <input type="number" name="vital[pulse]" class="rectangle-12"></input>
+                <button type="submit" class="overlap-group2">
                     <a href="Doctor/doctor-portal-standard">
                         <div class="rectangle-164"></div>
                     </a>
-                    <button class="update roboto-bold-black-squeeze-32px">UPDATE</button>
-                </div>
+                    <div class="update roboto-bold-black-squeeze-32px">UPDATE</div>
+                </buttom>
             </form>
             <div class="footer">
                 <div class="flex-row">
