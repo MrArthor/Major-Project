@@ -9,9 +9,18 @@ router.get('/add-doctor', (req, res) => {
     const CssLink = 'add-doctor'
     res.render('Doctor/add-doctor', { Title, CssLink });
 });
-router.post('/add-doctor', (req, res) => {
-    console.log(req.body);
-    res.send('Doctor Added');
+router.post('/add-doctor', async(req, res) => {
+    const Doctor = new DoctorModel({
+        Qualification: req.body.AddDoc.qualification,
+        Specialization: req.body.AddDoc.specialization,
+        Experience: req.body.AddDoc.experience,
+        Department: req.body.AddDoc.department,
+        Domain: req.body.AddDoc.Domain,
+        BriefDescription: req.body.AddDoc.briefdoctor,
+    });
+    await Doctor.save();
+    res.redirect(`/doctor/${Doctor._id}`);
+
 });
 router.get('/:id', async(req, res) => {
     const Title = "Home";
@@ -100,6 +109,14 @@ router.get('/:id/doctor-portal-feedback', async(req, res) => {
     const Doctor = await DoctorModel.findById(DoctorId);
 
     res.render('Doctor/doctor-portal-feedback', { Title, CssLink, Doctor });
+});
+router.post('/:id/doctor-portal-feedback', async(req, res) => {
+
+    const DoctorId = req.params.id;
+    const Doctor = await DoctorModel.findById(DoctorId);
+    const DocFeedback = req.bodyDocFeed;
+    console.log(DocFeedback);
+    res.redirect(`/doctor/${Doctor._id}/doctor-portal-feedback`);
 });
 
 router.get('/:id/doctor-portal-chat-choose', async(req, res) => {
