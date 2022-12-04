@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
+<% layout('Layout/boilerplate')%>
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="css/add-doctor.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="css/globals.css" />
-</head>
-
-<body style="margin: 0; background: #ffffff">
     <input type="hidden" id="anPageName" name="page" value="add-doctor" />
     <div class="container-center-horizontal">
         <div class="add-doctor screen">
@@ -28,27 +19,26 @@
                     </a>
                 </div>
             </div>
-            <form action="">
+            <form action="/Doctor/add-doctor" method="post">
                 <div class="flex-row">
                     <div class="sign-up-as roboto-black-metallic-seaweed-64px">SIGN UP AS</div>
                     <div class="doctor">DOCTOR</div>
                 </div>
                 <div class="qualification roboto-bold-scooter-32px">QUALIFICATION</div>
-                <input class="rectangle-5"></input>
+                <input type='text' name="AddDoc[qualification]" class="rectangle-5"></input>
                 <div class="department roboto-bold-scooter-32px">DEPARTMENT</div>
-                <input class="rectangle-12"></input>
+                <input type='text' name="AddDoc[department]" class="rectangle-12"></input>
                 <div class="experience roboto-bold-scooter-32px">EXPERIENCE</div>
-                <input class="rectangle-165"></input>
+                <input type='number' name="AddDoc[experience]" class="rectangle-165"></input>
                 <div class="place roboto-bold-scooter-32px">DOMAIN</div>
-                <input class="rectangle-166"></input>
+                <input type='text' name="AddDoc[DOMAIN]" class="rectangle-166"></input>
                 <div class="brief-about-doctor roboto-bold-scooter-32px">BRIEF ABOUT DOCTOR</div>
-                <input class="rectangle-167"></input>
-                <div class="overlap-group2">
+                <input type='text' name="AddDoc[briefdoctor]" class="rectangle-167"></input>
+                <button type="submit" class="overlap-group2">
                     <a href="doctor-portal-standard">
                         <div class="rectangle-164"></div>
                     </a>
-                    <button class="sign-up roboto-bold-black-squeeze-32px">SIGN UP</button>
-                </div>
+                    <div class="sign-up roboto-bold-black-squeeze-32px">SIGN UP</div></button>
             </form>
             <div class="footer">
                 <div class="flex-row-1">
@@ -56,9 +46,9 @@
                         <div class="flex-col">
                             <div class="ml-care roboto-black-white-96px">ML CARE</div>
                             <div class="vector-container">
-                                <img class="vector" src="img/vector-349@2x.svg" alt="Vector" />
-                                <img class="vector-1" src="img/vector-350@2x.svg" alt="Vector" />
-                                <img class="vector-2" src="img/vector-351@2x.svg" alt="Vector" />
+                                <img class="vector" src="/img/vector-349@2x.svg" alt="Vector" />
+                                <img class="vector-1" src="/img/vector-350@2x.svg" alt="Vector" />
+                                <img class="vector-2" src="/img/vector-351@2x.svg" alt="Vector" />
                             </div>
                         </div>
                         <div class="lorem-ipsum-container inter-medium-white-24px">
@@ -86,6 +76,6 @@
             </div>
         </div>
     </div>
-</body>
+    </body>
 
-</html>
+    </html>

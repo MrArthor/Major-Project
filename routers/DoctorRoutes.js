@@ -4,7 +4,15 @@ const DoctorModel = require('../Models/DoctorModel');
 const PatientModel = require('../Models/PatientModel');
 const calendar = require('node-calendar');
 const cal = new calendar.Calendar(calendar.SUNDAY);
-
+router.get('/add-doctor', (req, res) => {
+    const Title = 'Doctor';
+    const CssLink = 'add-doctor'
+    res.render('Doctor/add-doctor', { Title, CssLink });
+});
+router.post('/add-doctor', (req, res) => {
+    console.log(req.body);
+    res.send('Doctor Added');
+});
 router.get('/:id', async(req, res) => {
     const Title = "Home";
     const CssLink = 'Doctor-Portal';
