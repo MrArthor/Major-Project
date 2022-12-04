@@ -18,33 +18,35 @@
                     </a>
                 </div>
             </div>
-            <form action="">
+            <form action="/Patient/add-patient" method="post">
                 <div class="flex-row">
                     <div class="sign-up-as roboto-black-metallic-seaweed-64px">SIGN UP AS</div>
                     <div class="patient">PATIENT</div>
                 </div>
                 <div class="blood-group roboto-bold-scooter-32px">BLOOD GROUP</div>
-                <input class="rectangle-5"></input>
+                <input type="text" name="Patient[bloodgrp]" class="rectangle-5"></input>
                 <div class="blood-pressure roboto-bold-scooter-32px">BLOOD PRESSURE</div>
-                <input class="rectangle-12"></input>
+                <input type="number" name="Patient[bloodprs]" class="rectangle-12"></input>
                 <div class="pulse-rate roboto-bold-scooter-32px">PULSE RATE</div>
-                <input class="rectangle-165"></input>
+                <input type="number" name="Patient[pulserate]" class="rectangle-165"></input>
+                <div class="pulse-rate roboto-bold-scooter-32px">Age</div>
+                <input type="number" name="Patient[age]" class="rectangle-165"></input>
                 <div class="height roboto-bold-scooter-32px">HEIGHT</div>
-                <input class="rectangle-169"></input>
+                <input type="number" name="Patient[height]" class="rectangle-169"></input>
                 <div class="weight roboto-bold-scooter-32px">WEIGHT</div>
-                <input class="rectangle-170"></input>
+                <input type="number" name="Patient[weight]" class="rectangle-170"></input>
                 <div class="pre-history roboto-bold-scooter-32px">PRE HISTORY</div>
-                <input class="rectangle-166"></input>
+                <input type="text" name="Patient[prehistory]" class="rectangle-166"></input>
                 <div class="condition roboto-bold-scooter-32px">CONDITION</div>
-                <input class="rectangle-167"></input>
+                <input type="text" name="Patient[condition]" class="rectangle-167"></input>
                 <div class="prferred-doctor roboto-bold-scooter-32px">PRFERRED DOCTOR</div>
-                <input class="rectangle-168"></input>
-                <div class="overlap-group2">
+                <input type="text" name="Patient[prferreddoctor]" class="rectangle-168"></input>
+                <button type="submit" class="overlap-group2">
                     <a href="patient-portal-standard">
                         <div class="rectangle-164"></div>
                     </a>
-                    <button class="sign-up roboto-bold-black-squeeze-32px">SIGN UP</button>
-                </div>
+                    <div class="sign-up roboto-bold-black-squeeze-32px">SIGN UP</div>
+                </button>
             </form>
             <div class="footer">
                 <div class="flex-row-1">
