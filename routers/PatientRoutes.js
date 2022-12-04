@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const PatientModel = require('../Models/PatientModel');
-
+const FeedbackModel = require('../Models/FeedbackModel');
 router.get('/patient-portal', (req, res) => {
     const Title = "Patient Portal";
     const CssLink = 'patient-portal'
@@ -16,7 +16,6 @@ router.get('/add-patient', (req, res) => {
 router.post('/add-patient', async(req, res) => {
     const Title = "Add Patient";
     const CssLink = 'add-patient'
-    console.log(req.body);
     const Patient = new PatientModel({
         PreHistory: req.body.Patient.prehistory,
         Age: req.body.Patient.age,
@@ -29,8 +28,77 @@ router.post('/add-patient', async(req, res) => {
         Height: req.body.Patient.height,
     });
     await Patient.save();
-    console.log(Patient);
-    res.send(Patient);
+    res.redirect(`/Patient/${Patient._id}/`);
 })
+router.get('/:id', (req, res) => {
+    const Title = "Patient Portal";
+    const CssLink = 'patient-portal'
+    const PatientId = req.params.id;
+    const Patient = PatientModel.findById(PatientId);
+    res.render('Patient/Patient-Portal', { Title, CssLink, Patient })
+})
+
+router.get('/:id/vitals-edit-form', async(req, res) => {
+    const Title = "Edit Vitals";
+    const CssLink = 'vitals-edit-form'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    res.render('Patient/Vitals-Edit-Form', { Title, CssLink, Patient })
+})
+router.post('/:id/vitals-edit-form', async(req, res) => {
+    const Title = "Edit Vitals";
+    const CssLink = 'vitals-edit-form'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    Patient.BloodSugar = req.body.vital.sugar;
+    Patient.BloodPressure = req.body.vital.pressure;
+    Patient.PulseRate = req.body.vital.pulserate;
+    Patient.Temperature = req.body.vital.temp;
+    await Patient.save();
+    res.send(Patient);
+    // res.redirect(`/Patient/${Patient._id}`);
+})
+
+router.get('/:id/patient-portal-emr', async(req, res) => {
+    const Title = "Patient Portal EMR";
+    const CssLink = 'patient-portal-emr'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    res.render('Patient/patient-portal-emr', { Title, CssLink, Patient })
+})
+
+router.get('/:id/patient-portal-calendar', async(req, res) => {
+    const Title = "Patient Portal Calendar";
+    const CssLink = 'patient-portal-calendar'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    res.render('Patient/patient-portal-calendar', { Title, CssLink, Patient })
+})
+
+router.get('/:id/patient-portal-feedback', async(req, res) => {
+    const Title = "Patient Portal Feedback";
+    const CssLink = 'patient-portal-feedback'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    res.render('Patient/patient-portal-feedback', { Title, CssLink, Patient })
+})
+
+
+router.post('/:id/patient-portal-feedback', async(req, res) => {
+    const Title = "Patient Portal Feedback";
+    const CssLink = 'patient-portal-feedback'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    const Feedback = new FeedbackModel({
+        FullName: req.body.feedback.fullname,
+        Email: req.body.feedback.email,
+        Message: req.body.feedback.feedback,
+    });
+    await Feedback.save();
+    res.redirect(`/Patient/${Patient._id}`);
+})
+
+
+
 
 module.exports = router;

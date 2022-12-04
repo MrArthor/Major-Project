@@ -27,6 +27,8 @@ const PatientSchema = new Schema({
     Sex: String,
     BloodGroup: String,
     BloodSugar: Number,
+    PulseRate: Number,
+    Temperature: Number,
     BloodPressure: Number,
     Weight: Number,
     Height: Number,
