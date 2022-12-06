@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const PatientModel = require('../Models/PatientModel');
 const FeedbackModel = require('../Models/FeedbackModel');
+const request = require('request-promise');
 
 
 router.get('/patient-portal', (req, res) => {
@@ -146,7 +147,43 @@ router.get('/:id/patient-portal-settings', async(req, res) => {
     }
 
 })
+router.get('/:id/mental-health-form', async(req, res) => {
+    const Title = "Mental Health Test";
+    const CssLink = 'mental-health-form'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    res.render('General/mental-health-form', { Title, CssLink, Patient })
+})
 
+
+router.post('/:id/mental-health-form', async(req, res) => {
+    const Title = "Mental Health Test";
+    const CssLink = 'quiz-result'
+    const PatientId = req.params.id;
+    const Patient = await PatientModel.findById(PatientId);
+    const mentalhealth = req.body.mentalhealth;
+    console.log(mentalhealth);
+    const options = {
+        method: 'POST',
+
+        uri: 'http://127.0.0.1:9501/MachineLearningModel',
+        body: mentalhealth,
+
+        json: true
+    };
+    let result;
+    const sendrequest = await request(options)
+        .then(function(parsedBody) {
+            // console.log(parsedBody);
+            result = parsedBody['result'];
+            // console.log("Sum of Array from Python: ", result);
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+    res.render('General/quiz-result', { Title, CssLink, Patient, result })
+        // res.redirect(`/Patient/${Patient._id}`);
+})
 router.all('*', (req, res) => {
     const Title = "404";
     const CssLink = 'Patient-portal-billing'

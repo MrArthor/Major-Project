@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const io = require('./ChatApplication');
 
 router.get('/', (req, res) => {
     const Title = "Home";
@@ -46,4 +47,11 @@ router.post('/sign-up', (req, res) => {
     res.send('Sign Up');
 });
 
+
+router.get('/Chat', async(req, res) => {
+    // res.redirect('www.google.com');
+    // res.redirect('https://google.com');
+    const Title = "Chat";
+    res.redirect('http://localhost:5000/shit');
+})
 module.exports = router;

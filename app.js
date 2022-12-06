@@ -8,6 +8,8 @@ const methodOverride = require("method-override");
 const ExpressError = require("./utils/ExpressError");
 // const PatientRoutes = require('./routers/PatientRoutes')
 const app = express();
+const server = require('http').createServer(app);
+
 const GeneralRoutes = require('./routers/GeneralRoutes')
 const DoctorRoutes = require('./routers/DoctorRoutes')
 const PatientRoutes = require('./routers/PatientRoutes')
