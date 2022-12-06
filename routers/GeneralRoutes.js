@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const io = require('./ChatApplication');
-
+const UserModel = require('../Models/UserModel');
 router.get('/', (req, res) => {
     const Title = "Home";
     const CssLink = 'home-page'
@@ -40,11 +40,19 @@ router.get('/sign-up', (req, res) => {
     var CssLink = 'sign-up'
     res.render('General/sign-up', { Title, CssLink });
 });
-router.post('/sign-up', (req, res) => {
+router.post('/sign-up', async(req, res) => {
     const Title = "Sign Up";
     const temp = req.body.Signup;
+    const User = new UserModel(req.body.Signup);
+    await User.save();
     console.log(temp);
-    res.send('Sign Up');
+    if (temp.Type == "Doctor")
+        res.redirect('/Doctor/add-doctor');
+    else if (temp.Type == "Patient")
+        res.redirect('/Patient/add-patient');
+    else if (temp.Type == "Volunteer")
+        res.redirect('/Volunteer/add-volunteer');
+
 });
 
 
