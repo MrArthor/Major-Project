@@ -71,8 +71,22 @@ router.get('/:id/doctor-portal-calendar', async(req, res) => {
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor });
+    res
+        .render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor });
 });
+
+
+router.get('/:id/doctor-portal-patient-individual', async(req, res) => {
+    const Title = "Patient Individual";
+    const CssLink = 'Doctor-Portal-Patient-Individual';
+    const DoctorId = req.params.id;
+    const Doctor = await DoctorModel.findById(DoctorId);
+    const Patient = 0;
+    // const Patient = await PatientModel.findById(Doctor.PatientId);
+
+    res.render('Doctor/doctor-portal-patient-individual', { Title, CssLink, Doctor, Patient });
+});
+
 router.get('/:id/doctor-portal-patient-list', async(req, res) => {
 
     const Title = "Patient List";
@@ -135,6 +149,13 @@ router.get('/:id/doctor-portal-settings', async(req, res) => {
     const Doctor = await DoctorModel.findById(DoctorId);
 
     res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor });
+});
+
+router.all('*', (req, res) => {
+    const Title = "404";
+    const CssLink = 'doctor-portal-standard';
+
+    res.render('Doctor/doctor-portal-standard', { Title, CssLink });
 });
 
 

@@ -12,9 +12,9 @@ const UserSchema = new Schema({
     Address: String,
     Type: String,
     Name: String,
-
+    Password: String
 });
 
-UserSchema.plugin(passportLocalMongoose);
+// UserSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('UserModel', UserSchema);
