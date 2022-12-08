@@ -8,13 +8,11 @@
         "install-chat": "cd ChatApplication && npm i",
         "install-server": "npm i",
         "setup": "concurrently -n 'server','client' -c 'auto'  \"npm  run install-server\" \"npm run install-chat\"",
-        "client": "cd client && npm start",
+        "chat": "cd ChatApplication && nodemon server.js",
         "server": "nodemon app.js",
         "start-server": "concurrently -n server,client -c 'auto'  \"npm run server\" \"npm run client",
-
         "python": " cd MachineLearning && python FlaskApp.py",
         "start-everything": "concurrently -n server,python -c 'auto'  \"npm run server\" \"npm run python"
-
     },
     "keywords": [],
     "author": "Mr Arthor",

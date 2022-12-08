@@ -1,15 +1,15 @@
 const express = require('express');
-const router = express.Router();
-const DoctorModel = require('../Models/DoctorModel');
-const PatientModel = require('../Models/PatientModel');
-const calendar = require('node-calendar');
-const cal = new calendar.Calendar(calendar.SUNDAY);
-router.get('/add-doctor', (req, res) => {
+const router = express.Router(); // Importing Express
+const DoctorModel = require('../Models/DoctorModel'); // Importing Doctor Model
+const PatientModel = require('../Models/PatientModel'); // Importing Patient Model
+const calendar = require('node-calendar'); // Importing Calendar
+const cal = new calendar.Calendar(calendar.SUNDAY); // Creating Calendar
+router.get('/add-doctor', (req, res) => { // Add Doctor Page
     const Title = 'Doctor';
     const CssLink = 'add-doctor'
     res.render('Doctor/add-doctor', { Title, CssLink });
 });
-router.post('/add-doctor', async(req, res) => {
+router.post('/add-doctor', async(req, res) => { // Add Doctor Page Post Request
     const Doctor = new DoctorModel({
         Qualification: req.body.AddDoc.qualification,
         Specialization: req.body.AddDoc.specialization,
@@ -18,11 +18,11 @@ router.post('/add-doctor', async(req, res) => {
         Domain: req.body.AddDoc.Domain,
         BriefDescription: req.body.AddDoc.briefdoctor,
     });
-    await Doctor.save();
-    res.redirect(`/doctor/${Doctor._id}`);
+    await Doctor.save(); // Saving Doctor
+    res.redirect(`/doctor/${Doctor._id}`); // Redirecting to Doctor Portal
 
-});
-router.get('/:id', async(req, res) => {
+}); // Exporting Router
+router.get('/:id', async(req, res) => { // Doctor Portal
     const Title = "Home";
     const CssLink = 'Doctor-Portal';
     const { id } = req.params;
@@ -34,49 +34,47 @@ router.get('/:id', async(req, res) => {
     res.render('Doctor/Doctor-Portal', { Title, CssLink, Doctor, MonthName, Year });
 });
 
-router.get('/:id/vitals-edit-form-doc', async(req, res) => {
+router.get('/:id/vitals-edit-form-doc', async(req, res) => { // Vitals Edit Form
     const Title = "Vitals Edit Form";
     const CssLink = 'Vitals-Edit-Form-Doc';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor });
+    res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor }); // Rendering Vitals Edit Form
 });
-router.post('/:id/vitals-edit-form-doc', async(req, res) => {
+router.post('/:id/vitals-edit-form-doc', async(req, res) => { // Vitals Edit Form Post Request
     const Title = "Vitals Edit Form";
     const CssLink = 'Vitals-Edit-Form-Doc';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
-    console.log(Doctor)
-    console.log(req.body);
     const { temp, pulse } = req.body;
     Doctor.Temperature = temp;
     Doctor.PulseRate = pulse;
     await Doctor.save();
     console.log(Doctor)
-    res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor });
+    res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor }); // Rendering Vitals Edit Form
 });
 
-router.get('/:id/doctor-portal-settings', async(req, res) => {
+router.get('/:id/doctor-portal-settings', async(req, res) => { // Doctor Portal Settings
     const Title = "Settings";
     const CssLink = 'Doctor-Portal-Settings';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-settings', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-settings', { Title, CssLink, Doctor }); // Rendering Doctor Portal Settings
 });
-router.get('/:id/doctor-portal-calendar', async(req, res) => {
+router.get('/:id/doctor-portal-calendar', async(req, res) => { // Doctor Portal Calendar
     const Title = "Calendar";
     const CssLink = 'Doctor-Portal-Calendar';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
     res
-        .render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor });
+        .render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor }); // Rendering Doctor Portal Calendar
 });
 
 
-router.get('/:id/doctor-portal-patient-individual', async(req, res) => {
+router.get('/:id/doctor-portal-patient-individual', async(req, res) => { // Doctor Portal Patient Individual
     const Title = "Patient Individual";
     const CssLink = 'Doctor-Portal-Patient-Individual';
     const DoctorId = req.params.id;
@@ -84,78 +82,78 @@ router.get('/:id/doctor-portal-patient-individual', async(req, res) => {
     const Patient = 0;
     // const Patient = await PatientModel.findById(Doctor.PatientId);
 
-    res.render('Doctor/doctor-portal-patient-individual', { Title, CssLink, Doctor, Patient });
+    res.render('Doctor/doctor-portal-patient-individual', { Title, CssLink, Doctor, Patient }); // Rendering Doctor Portal Patient Individual
 });
 
-router.get('/:id/doctor-portal-patient-list', async(req, res) => {
+router.get('/:id/doctor-portal-patient-list', async(req, res) => { // Doctor Portal Patient List
 
     const Title = "Patient List";
     const CssLink = 'Doctor-Portal-Patient-List';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-patient-list', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-patient-list', { Title, CssLink, Doctor }); // Rendering Doctor Portal Patient List
 });
 
-router.get('/:id/doctor-portal-patient-profile', async(req, res) => {
+router.get('/:id/doctor-portal-patient-profile', async(req, res) => { // Doctor Portal Patient Profile
     const Title = "Patient Profile";
     const CssLink = 'Doctor-Portal-Patient-Profile';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-patient-profile', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-patient-profile', { Title, CssLink, Doctor }); // Rendering Doctor Portal Patient Profile
 
 });
 
-router.get('/:id/doctor-portal-standard', async(req, res) => {
+router.get('/:id/doctor-portal-standard', async(req, res) => { // Doctor Portal Standard
     const Title = "Standard";
     const CssLink = 'Doctor-Portal-Standard';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor }); // Rendering Doctor Portal Standard
 });
 
-router.get('/:id/doctor-portal-feedback', async(req, res) => {
+router.get('/:id/doctor-portal-feedback', async(req, res) => { // Doctor Portal Feedback
     const Title = "Feedback";
     const CssLink = 'Doctor-Portal-Feedback';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-feedback', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-feedback', { Title, CssLink, Doctor }); // Rendering Doctor Portal Feedback
 });
-router.post('/:id/doctor-portal-feedback', async(req, res) => {
+router.post('/:id/doctor-portal-feedback', async(req, res) => { // Doctor Portal Feedback Post Request
 
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
     const DocFeedback = req.bodyDocFeed;
     console.log(DocFeedback);
-    res.redirect(`/doctor/${Doctor._id}/doctor-portal-feedback`);
+    res.redirect(`/doctor/${Doctor._id}/doctor-portal-feedback`); // Rendering Doctor Portal Feedback
 });
 
-router.get('/:id/doctor-portal-chat-choose', async(req, res) => {
+router.get('/:id/doctor-portal-chat-choose', async(req, res) => { // Doctor Portal Chat Choose
     const Title = "Chat";
     const CssLink = 'Doctor-Portal-Chat-Choose';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-chat-choose', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-chat-choose', { Title, CssLink, Doctor }); // Rendering Doctor Portal Chat Choose
 });
 
-router.get('/:id/doctor-portal-settings', async(req, res) => {
+router.get('/:id/doctor-portal-settings', async(req, res) => { // Doctor Portal Settings
     const Title = "Settings";
     const CssLink = 'Doctor-Portal-Settings';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId);
 
-    res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor });
+    res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor }); // Rendering Doctor Portal Settings
 });
 
-router.all('*', (req, res) => {
+router.all('*', (req, res) => { // 404 Page
     const Title = "404";
     const CssLink = 'doctor-portal-standard';
 
-    res.render('Doctor/doctor-portal-standard', { Title, CssLink });
+    res.render('Doctor/doctor-portal-standard', { Title, CssLink }); // Rendering 404 Page
 });
 
 
