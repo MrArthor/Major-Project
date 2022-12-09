@@ -1,6 +1,5 @@
 const express = require('express'); // Importing Express
 const router = express.Router(); // Creating Router
-const io = require('./ChatApplication'); // Importing Socket.io
 const UserModel = require('../Models/UserModel'); // Importing User Model
 router.get('/', (req, res) => { // Home Page
     const Title = "Home";

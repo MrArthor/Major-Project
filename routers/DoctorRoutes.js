@@ -38,7 +38,7 @@ router.get('/:id/vitals-edit-form-doc', async(req, res) => { // Vitals Edit Form
     const Title = "Vitals Edit Form";
     const CssLink = 'Vitals-Edit-Form-Doc';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor }); // Rendering Vitals Edit Form
 });
@@ -46,7 +46,7 @@ router.post('/:id/vitals-edit-form-doc', async(req, res) => { // Vitals Edit For
     const Title = "Vitals Edit Form";
     const CssLink = 'Vitals-Edit-Form-Doc';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
     const { temp, pulse } = req.body;
     Doctor.Temperature = temp;
     Doctor.PulseRate = pulse;
@@ -59,7 +59,7 @@ router.get('/:id/doctor-portal-settings', async(req, res) => { // Doctor Portal 
     const Title = "Settings";
     const CssLink = 'Doctor-Portal-Settings';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-settings', { Title, CssLink, Doctor }); // Rendering Doctor Portal Settings
 });
@@ -67,7 +67,7 @@ router.get('/:id/doctor-portal-calendar', async(req, res) => { // Doctor Portal 
     const Title = "Calendar";
     const CssLink = 'Doctor-Portal-Calendar';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res
         .render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor }); // Rendering Doctor Portal Calendar
@@ -78,7 +78,7 @@ router.get('/:id/doctor-portal-patient-individual', async(req, res) => { // Doct
     const Title = "Patient Individual";
     const CssLink = 'Doctor-Portal-Patient-Individual';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
     const Patient = 0;
     // const Patient = await PatientModel.findById(Doctor.PatientId);
 
@@ -90,7 +90,7 @@ router.get('/:id/doctor-portal-patient-list', async(req, res) => { // Doctor Por
     const Title = "Patient List";
     const CssLink = 'Doctor-Portal-Patient-List';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-patient-list', { Title, CssLink, Doctor }); // Rendering Doctor Portal Patient List
 });
@@ -99,7 +99,7 @@ router.get('/:id/doctor-portal-patient-profile', async(req, res) => { // Doctor 
     const Title = "Patient Profile";
     const CssLink = 'Doctor-Portal-Patient-Profile';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-patient-profile', { Title, CssLink, Doctor }); // Rendering Doctor Portal Patient Profile
 
@@ -109,7 +109,7 @@ router.get('/:id/doctor-portal-standard', async(req, res) => { // Doctor Portal 
     const Title = "Standard";
     const CssLink = 'Doctor-Portal-Standard';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor }); // Rendering Doctor Portal Standard
 });
@@ -118,14 +118,14 @@ router.get('/:id/doctor-portal-feedback', async(req, res) => { // Doctor Portal 
     const Title = "Feedback";
     const CssLink = 'Doctor-Portal-Feedback';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-feedback', { Title, CssLink, Doctor }); // Rendering Doctor Portal Feedback
 });
 router.post('/:id/doctor-portal-feedback', async(req, res) => { // Doctor Portal Feedback Post Request
 
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
     const DocFeedback = req.bodyDocFeed;
     console.log(DocFeedback);
     res.redirect(`/doctor/${Doctor._id}/doctor-portal-feedback`); // Rendering Doctor Portal Feedback
@@ -135,7 +135,7 @@ router.get('/:id/doctor-portal-chat-choose', async(req, res) => { // Doctor Port
     const Title = "Chat";
     const CssLink = 'Doctor-Portal-Chat-Choose';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-chat-choose', { Title, CssLink, Doctor }); // Rendering Doctor Portal Chat Choose
 });
@@ -144,7 +144,7 @@ router.get('/:id/doctor-portal-settings', async(req, res) => { // Doctor Portal 
     const Title = "Settings";
     const CssLink = 'Doctor-Portal-Settings';
     const DoctorId = req.params.id;
-    const Doctor = await DoctorModel.findById(DoctorId);
+    const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
     res.render('Doctor/doctor-portal-standard', { Title, CssLink, Doctor }); // Rendering Doctor Portal Settings
 });

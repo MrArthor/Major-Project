@@ -35,12 +35,15 @@
                     <div class="flex-row-1">
                         <div class="flex-col-4">
                             <div class="overlap-group-1">
-                                <div class="in-patient opensans-extra-bold-palm-green-40px">IN-PATIENT</div>
+                                <div class="in-patient opensans-extra-bold-palm-green-40px">PATIENT</div>
                             </div>
-                            <div class="hi-markus roboto-black-atlantis-64px">Hi, MARKUS!</div>
+                            <div class="hi-markus roboto-black-atlantis-64px">Hi,
+                                <%=Patient.UserDetails.Name  %> !</div>
                         </div>
                         <img class="bell" src="/img/bell-1@2x.svg" alt="bell" />
-                        <div class="markus-mcgill opensans-bold-black-16px">MARKUS<br />MCGILL</div>
+                        <div class="markus-mcgill opensans-bold-black-16px">
+                            <%=Patient.UserDetails.Name %>
+                        </div>
                         <div class="avatar-image-60"></div>
                     </div>
                     <div class="overlap-group6">
@@ -77,7 +80,10 @@
                             <div class="rectangle-80"></div>
                             <div class="rectangle-84"></div>
                             <div class="calendar-1 roboto-bold-black-squeeze-24px">CALENDAR</div>
-                            <div class="november-2022 roboto-bold-metallic-seaweed-20px">NOVEMBER 2022</div>
+                            <div class="november-2022 roboto-bold-metallic-seaweed-20px">
+                                <%=MonthName %>
+                                    <%=Year %>
+                            </div>
                             <img class="vector-5" src="/img/vector-12@2x.svg" alt="Vector" />
                             <img class="vector-6" src="/img/vector-13@2x.svg" alt="Vector" />
                             <div class="calendar-2">
@@ -136,7 +142,8 @@
                                 <div class="overlap-group1">
                                     <div class="overlap-group-2"><img class="vector" src="/img/vector-15@2x.svg" alt="Vector" /></div>
                                     <div class="temperature roboto-bold-black-20px">TEMPERATURE</div>
-                                    <div class="x91-c roboto-black-west-side-32px">91 C</div>
+                                    <div class="x91-c roboto-black-west-side-32px">
+                                        <%=Patient.Temperature %> C</div>
                                 </div>
                                 <div class="overlap-group15">
                                     <div class="overlap-group1-1"><img class="vector-8" src="/img/vector-50@2x.svg" alt="Vector" /></div>
@@ -153,8 +160,9 @@
                             <div class="overlap-group-container-3">
                                 <div class="overlap-group1">
                                     <div class="overlap-group10-1"><img class="vector" src="/img/vector-15@2x.svg" alt="Vector" /></div>
-                                    <div class="temperature roboto-bold-black-20px">TEMPERATURE</div>
-                                    <div class="x91-c roboto-black-west-side-32px">91 C</div>
+                                    <div class="temperature roboto-bold-black-20px">Blood Sugar</div>
+                                    <div class="x91-c roboto-black-west-side-32px">
+                                        <%=Patient.BloodSugar %> C</div>
                                 </div>
                                 <div class="overlap-group14">
                                     <div class="overlap-group9-1"><img class="vector-9" src="/img/vector-51@2x.svg" alt="Vector" /></div>

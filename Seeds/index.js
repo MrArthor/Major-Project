@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const DoctorModel = require('../models/DoctorModel');
 const Data = require('./MOCK_DATA.js');
+const UserModel = require('../models/UserModel');
 mongoose.connect('mongodb://localhost:27017/MajorProject', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -18,10 +19,12 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 // console.log(Data);
 const seedDB = async() => {
     await DoctorModel.deleteMany({});
+    const Users = await UserModel.find({});
     for (let i = 0; i < 10; i++) {
 
         const doctor = new DoctorModel({
             //YOUR USER ID
+            UserDetails: Users[i + 10]._id,
             Experience: Math.floor(Math.random() * 10) + 1,
             Specialization: Data[i].Qualification,
             NoOfPatients: Data[i].noofpatient % 20,
