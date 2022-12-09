@@ -22,7 +22,7 @@ const DoctorSchema = new Schema({
     Temperature: Number,
     PulseRate: Number,
     TestsScheduled: Number,
-    Patients: [{
+    PatientId: [{
         type: Schema.Types.ObjectId,
         ref: 'PatientModel',
         // required: true

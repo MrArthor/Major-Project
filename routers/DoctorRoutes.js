@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router(); // Importing Express
 const DoctorModel = require('../Models/DoctorModel'); // Importing Doctor Model
 const PatientModel = require('../Models/PatientModel'); // Importing Patient Model
+const FeedbackModel = require('../Models/FeedbackModel'); // Importing Feedback Model
 const calendar = require('node-calendar'); // Importing Calendar
 const cal = new calendar.Calendar(calendar.SUNDAY); // Creating Calendar
 router.get('/add-doctor', (req, res) => { // Add Doctor Page
@@ -30,8 +31,8 @@ router.get('/:id', async(req, res) => { // Doctor Portal
     const date = new Date();
     const Month = date.getMonth();
     const Year = date.getFullYear();
-    const MonthName = calendar.month_name[Month]
-    const Doctor = await DoctorModel.findById(id);
+    const MonthName = calendar.month_name[Month + 1]
+    const Doctor = await DoctorModel.findById(id).populate('PatientId').populate('UserDetails');
     res.render('Doctor/Doctor-Portal', { Title, CssLink, Doctor, MonthName, Year });
 });
 
@@ -127,9 +128,16 @@ router.post('/:id/doctor-portal-feedback', async(req, res) => { // Doctor Portal
 
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
-    const DocFeedback = req.bodyDocFeed;
+    const DocFeedback = req.body.DocFeed;
     console.log(DocFeedback);
-    res.redirect(`/doctor/${Doctor._id}/doctor-portal-feedback`); // Rendering Doctor Portal Feedback
+    const Feedback = new FeedbackModel({
+
+        FullNameName: DocFeedback.fullname,
+        Email: DocFeedback.email,
+        Message: DocFeedback.feedback,
+    })
+    await Feedback.save();
+    res.redirect('/doctor/' + DoctorId);
 });
 
 router.get('/:id/doctor-portal-chat-choose', async(req, res) => { // Doctor Portal Chat Choose

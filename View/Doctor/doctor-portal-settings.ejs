@@ -21,12 +21,13 @@
             <div class="flex-row">
                 <div class="sidebar-doc">
                     <div class="ml-care roboto-black-black-squeeze-24px">ML<br />CARE</div>
-                    <a href="Doctor/doctor-portal-standard"><img class="home" src="/img/home-23@2x.svg" alt="home" /> </a>
-                    <a href="Doctor/doctor-portal-patient-list"><img class="vector" src="/img/vector-263@2x.svg" alt="Vector" /> </a>
-                    <a href="Doctor/doctor-portal-calendar"><img class="calendar" src="/img/calendar-23@2x.svg" alt="calendar" /> </a>
-                    <a href="Doctor/doctor-portal-feedback"><img class="feedback" src="/img/feedback-23@2x.svg" alt="feedback" /> </a>
-                    <a href="Doctor/doctor-portal-chat-choose"><img class="chat" src="/img/chat-23@2x.svg" alt="chat" /> </a>
-                    <div class="overlap-group1"><img class="setting" src="/img/setting-23@2x.svg" alt="setting" /></div>
+                    <a href="/Doctor/<%=Doctor._id  %>"><img class="home" src="/img/home@2x.svg" alt="home" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-patient-list"><img class="vector" src="/img/vector@2x.svg" alt="Vector" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-calendar"><img class="calendar" src="/img/calendar@2x.svg" alt="calendar" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-feedback"><img class="feedback" src="/img/feedback@2x.svg" alt="feedback" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-chat-choose"><img class="chat" src="/img/chat@2x.svg" alt="chat" /> </a>
+
+                    <div class="overlap-group1"><img class="setting" src="/img/setting@2x.svg" alt="setting" /></div>
                 </div>
                 <div class="flex-col">
                     <div class="flex-row-1">
@@ -38,11 +39,13 @@
                             <div class="dr-ak-mehta-1 opensans-bold-black-16px">
                                 <%=Doctor.UserDetails.Name %>
                             </div>
-                            <div class="sur-102 opensans-bold-olive-drab-14px">SUR-102</div>
+                            <div class="sur-102 opensans-bold-olive-drab-14px">
+                                <%=Doctor._id%>
+                            </div>
                         </div>
                         <div class="avatar-image-60"></div>
                     </div>
-                    <img class="under-construction" src="/img/under-construction-2@2x.svg" alt="under construction" />
+                    <img class="under-construction" src="/img/under-construction@2x.svg" alt="under construction" />
                     <div class="surname roboto-black-silver-chalice-64px">PAGE UNDER CONSTRUCTION</div>
                 </div>
             </div>

@@ -36,27 +36,29 @@
                             <div class="dr-ak-mehta-1 opensans-bold-black-16px">
                                 <%=Doctor.UserDetails.Name %>
                             </div>
-                            <div class="sur-102 opensans-bold-olive-drab-14px">SUR-102</div>
+                            <div class="sur-102 opensans-bold-olive-drab-14px">
+                                <%=Doctor._id%>
+                            </div>
                         </div>
                         <div class="avatar-image-60"></div>
                     </div>
                     <div class="overlap-group3">
                         <img class="pavan-772" src="/img/pavan-772-1@1x.png" alt="pavan 772" />
                         <div class="flex-col-2">
-                            <form action="/Doctor/<%=Doctor._id %>/doctor-portal-feedback" method="post"></form>
-                            <div class="overlap-group4">
-                                <div class="feedback-form roboto-bold-black-squeeze-24px">FEEDBACK FORM</div>
-                            </div>
-                            <div class="need-support roboto-bold-eastern-blue-32px">Need Support?</div>
-                            <p class="contact-us-if-you-ne">Contact us if you need further assistance.</p>
-                            <div class="full-name opensans-bold-black-20px">Full Name</div>
-                            <input type="text" name="DocFeed[fullanme]" class="rectangle"></input>
-                            <div class="flex-col-item opensans-bold-black-20px">Email</div>
-                            <input type="email" name="DocFeed[email]" class="rectangle"></input>
-                            <div class="flex-col-item opensans-bold-black-20px">Enter your feedback</div>
-                            <input type="text" name="DocFeed[feedback]" class="rectangle-84"></input>
-                            <button type="submit" class="overlap-group5">
-                                    <div class="rectangle-82"></div> -->
+                            <form action="/Doctor/<%=Doctor._id %>/doctor-portal-feedback" method="post">
+                                <div class="overlap-group4">
+                                    <div class="feedback-form roboto-bold-black-squeeze-24px">FEEDBACK FORM</div>
+                                </div>
+                                <div class="need-support roboto-bold-eastern-blue-32px">Need Support?</div>
+                                <p class="contact-us-if-you-ne">Contact us if you need further assistance.</p>
+                                <div class="full-name opensans-bold-black-20px">Full Name</div>
+                                <input type="text" name="DocFeed[fullname]" class="rectangle"></input>
+                                <div class="flex-col-item opensans-bold-black-20px">Email</div>
+                                <input type="email" name="DocFeed[email]" class="rectangle"></input>
+                                <div class="flex-col-item opensans-bold-black-20px">Enter your feedback</div>
+                                <input type="text" name="DocFeed[feedback]" class="rectangle-84"></input>
+                                <button type="submit" class="overlap-group5">
+                                    <div class="rectangle-82"></div> 
                                 <div class="submit roboto-bold-black-squeeze-24px">SUBMIT</div>
                             </button>
 
