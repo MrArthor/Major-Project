@@ -11,6 +11,7 @@ router.get('/add-doctor', (req, res) => { // Add Doctor Page
 });
 router.post('/add-doctor', async(req, res) => { // Add Doctor Page Post Request
     const Doctor = new DoctorModel({
+
         Qualification: req.body.AddDoc.qualification,
         Specialization: req.body.AddDoc.specialization,
         Experience: req.body.AddDoc.experience,
