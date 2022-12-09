@@ -132,7 +132,7 @@ router.post('/:id/doctor-portal-feedback', async(req, res) => { // Doctor Portal
     console.log(DocFeedback);
     const Feedback = new FeedbackModel({
 
-        FullNameName: DocFeedback.fullname,
+        FullName: DocFeedback.fullname,
         Email: DocFeedback.email,
         Message: DocFeedback.feedback,
     })
