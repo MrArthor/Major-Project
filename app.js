@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
+mongoose.set('strictQuery', false);
 
 
 mongoose.connect("mongodb://localhost:27017/MajorProject", {
@@ -33,12 +34,9 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-
-
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "View"));
-
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'Public')))
@@ -56,19 +54,17 @@ const SessionConfig = {
 
 app.use(session(SessionConfig))
 app.use(Flash())
+app.use((req, res, next) => {
+    res.locals.currentUser = req.session.user;
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+})
+
 app.use('/', GeneralRoutes)
 app.use('/Patient', PatientRoutes);
 app.use('/Doctor', DoctorRoutes);
 app.use('/Volunteer', VolunteerRoutes);
-app.use((req, res, next) => {
-    res.locals.success = req.flash('success');
-    res.locals.Error = req.flash('error');
-    res.locals.CurrentUser = req.user;
-
-    next();
-})
-
-
 
 app.get("/", (req, res) => {
     const Title = "Home-Page";
@@ -88,13 +84,6 @@ app.use((err, req, res, next) => {
     const CssLink = 'error-page'
     res.status(statusCode).render('error', { err, Title, CssLink });
 })
-
-
-// app.use((err, req, res, next) => {
-//     const { statusCode = 500 } = err;
-//     if (!err.message) err.message = "Oh No, Something Went Wrong!";
-//     res.status(statusCode).render("error", { err });
-// });
 
 app.listen(9483, () => {
     console.log("Serving on port 9483");

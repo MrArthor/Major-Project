@@ -15,7 +15,9 @@
                             <div class="dr-cary-acquiger opensans-bold-black-30px">Dr. Cary Acquiger</div>
                             <img class="doctor-1" src="/img/doctor@2x.svg" alt="doctor" />
                             <div class="rectangle-84"></div>
-                            <div class="start-chat roboto-bold-black-squeeze-16px">Start Chat</div>
+
+                            <div class="start-chat roboto-bold-black-squeeze-16px"><a href="/chat">Start Chat</a></div>
+
                         </div>
                         <div class="overlap-group7">
                             <div class="rectangle-8"></div>
@@ -24,7 +26,9 @@
                             <a href="patient-portal-chat-app-volunteer">
                                 <div class="rectangle-86"></div>
                             </a>
+                            <a href="/chat"></a>
                             <div class="start-chat-1 roboto-bold-black-squeeze-16px">Start Chat</div>
+                            </a>
                             <img class="volunteer-1" src="/img/volunteer@2x.svg" alt="Volunteer" />
                         </div>
                     </div>
@@ -97,9 +101,11 @@
                     <div class="navbar-link-products opensans-bold-white-16px">PRODUCTS</div>
                     <div class="navbar-link-services opensans-bold-white-16px">SERVICES</div>
                     <div class="navbar-link-contact-us opensans-bold-white-16px">CONTACT US</div>
-                    <a href="/sign-up">
-                        <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">SIGN UP/LOG IN</div>
-                    </a>
+                    <% if(!currentUser) {%>
+                        <a href="/sign-up">
+                            <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">SIGN UP/LOG IN</div>
+                        </a>
+                        <% } %>
                 </div>
             </div>
         </div>

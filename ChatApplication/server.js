@@ -17,7 +17,7 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
     console.log("Database connected");
 });
-
+mongoose.set('strictQuery', false);
 
 // Global variables to hold all usernames and rooms created
 var usernames = {};
@@ -30,10 +30,10 @@ io.on("connection", function(socket) {
     console.log(`User connected to server.`);
 
     socket.on("createUser", async(username) => {
-        const User = await UserModel.find({ 'username': username });
-
+        const User = await UserModel.find({});
+        console.log(User);
         socket.username = User.name;
-        usernames[username] = User.name;
+        usernames[User.name] = User.name;
         socket.currentRoom = "global";
         socket.join("global");
 

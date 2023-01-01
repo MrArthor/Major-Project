@@ -164,14 +164,14 @@
                     <div class="sidebar">
                         <div class="overlap-group1-1">
                             <div class="ml-care roboto-black-black-squeeze-24px">ML<br />CARE</div>
-                            <a href="patient-portal-standard"><img class="home" src="/img/home-19@2x.svg" alt="home" /> </a>
-                            <a href="patient-portal-emr"><img class="emr" src="/img/emr-16@2x.svg" alt="emr" /> </a>
-                            <div class="overlap-group-5"><img class="calendar" src="/img/calendar-19@2x.svg" alt="calendar" /></div>
-                            <a href="patient-portal-lab-tests"><img class="lab" src="/img/lab-17@2x.svg" alt="lab" /> </a>
-                            <a href="patient-portal-billing"><img class="bill" src="/img/bill-16@2x.svg" alt="bill" /> </a>
-                            <a href="patient-portal-feedback"><img class="feedback" src="/img/feedback-19@2x.svg" alt="feedback" /> </a>
-                            <a href="patient-portal-chat-app-doc-vol"><img class="chat" src="/img/chat-19@2x.svg" alt="chat" /> </a>
-                            <a href="patient-portal-settings"><img class="setting" src="/img/setting-19@2x.svg" alt="setting" />
+                            <a href="patient-portal-standard"><img class="home" src="/img/home@2x.svg" alt="home" /> </a>
+                            <a href="patient-portal-emr"><img class="emr" src="/img/emr@2x.svg" alt="emr" /> </a>
+                            <div class="overlap-group-5"><img class="calendar" src="/img/calendar@2x.svg" alt="calendar" /></div>
+                            <a href="patient-portal-lab-tests"><img class="lab" src="/img/lab@2x.svg" alt="lab" /> </a>
+                            <a href="patient-portal-billing"><img class="bill" src="/img/bill@2x.svg" alt="bill" /> </a>
+                            <a href="patient-portal-feedback"><img class="feedback" src="/img/feedback@2x.svg" alt="feedback" /> </a>
+                            <a href="patient-portal-chat-app-doc-vol"><img class="chat" src="/img/chat@2x.svg" alt="chat" /> </a>
+                            <a href="patient-portal-settings"><img class="setting" src="/img/setting@2x.svg" alt="setting" />
                             </a>
                         </div>
                     </div>
@@ -186,25 +186,25 @@
                                 </div>
                             </div>
                             <div class="lorem-ipsum-container inter-medium-white-24px">
+                                <!-- <div class="lorem-ipsum">Lorem Ipsum</div>
                                 <div class="lorem-ipsum">Lorem Ipsum</div>
                                 <div class="lorem-ipsum">Lorem Ipsum</div>
                                 <div class="lorem-ipsum">Lorem Ipsum</div>
                                 <div class="lorem-ipsum">Lorem Ipsum</div>
                                 <div class="lorem-ipsum">Lorem Ipsum</div>
                                 <div class="lorem-ipsum">Lorem Ipsum</div>
-                                <div class="lorem-ipsum">Lorem Ipsum</div>
-                                <div class="lorem-ipsum">Lorem Ipsum</div>
+                                <div class="lorem-ipsum">Lorem Ipsum</div> -->
                             </div>
                         </div>
                         <div class="lorem-ipsum-container-1 inter-medium-white-24px">
+                            <!-- <div class="lorem-ipsum">Lorem Ipsum</div>
                             <div class="lorem-ipsum">Lorem Ipsum</div>
                             <div class="lorem-ipsum">Lorem Ipsum</div>
                             <div class="lorem-ipsum">Lorem Ipsum</div>
                             <div class="lorem-ipsum">Lorem Ipsum</div>
                             <div class="lorem-ipsum">Lorem Ipsum</div>
                             <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
+                            <div class="lorem-ipsum">Lorem Ipsum</div> -->
                         </div>
                     </div>
                 </div>
@@ -220,9 +220,11 @@
                     <div class="navbar-link-products opensans-bold-white-16px">PRODUCTS</div>
                     <div class="navbar-link-services opensans-bold-white-16px">SERVICES</div>
                     <div class="navbar-link-contact-us opensans-bold-white-16px">CONTACT US</div>
-                    <a href="/sign-up">
-                        <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">SIGN UP/LOG IN</div>
-                    </a>
+                    <% if(!currentUser) {%>
+                        <a href="/sign-up">
+                            <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">SIGN UP/LOG IN</div>
+                        </a>
+                        <% } %>
                 </div>
             </div>
         </div>
