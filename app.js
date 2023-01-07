@@ -8,21 +8,19 @@ const methodOverride = require("method-override");
 const ExpressError = require("./utils/ExpressError");
 // const PatientRoutes = require('./routers/PatientRoutes')
 const app = express();
-const server = require('http').createServer(app);
-
 const GeneralRoutes = require('./routers/GeneralRoutes')
 const DoctorRoutes = require('./routers/DoctorRoutes')
 const PatientRoutes = require('./routers/PatientRoutes')
 const VolunteerRoutes = require('./routers/VolunteerRoutes')
 const bodyParser = require('body-parser');
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(bodyParser.json());
 
-
 mongoose.set('strictQuery', false);
-
 
 mongoose.connect("mongodb://localhost:27017/MajorProject", {
     useNewUrlParser: true,
@@ -50,7 +48,6 @@ const SessionConfig = {
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }
-
 
 app.use(session(SessionConfig))
 app.use(Flash())
