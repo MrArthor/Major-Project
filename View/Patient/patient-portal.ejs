@@ -40,7 +40,7 @@
                                 <div class="in-patient opensans-extra-bold-palm-green-40px">PATIENT</div>
                             </div>
                             <div class="hi-markus roboto-black-atlantis-64px">Hi,
-                                <%=Patient.UserDetails.Name  %> !</div>
+                                <%=Patient.UserDetails.FullName  %> !</div>
                         </div>
                         <img class="bell" src="/img/bell-1@2x.svg" alt="bell" />
                         <div class="markus-mcgill opensans-bold-black-16px">
@@ -89,13 +89,18 @@
                             <img class="vector-5" src="/img/vector-12@2x.svg" alt="Vector" />
                             <img class="vector-6" src="/img/vector-13@2x.svg" alt="Vector" />
                             <div class="calendar-2">
-                                <div class="flex-col">
-                                    <div class="sun-19 roboto-bold-west-side-16px">SUN<br />19</div>
-                                    <div class="cal-pill">
-                                        <div class="ellipse-10"></div>
+                                <% for (i in Dat){ %>
+                                    <div class="flex-col">
+                                        <div class="sun-19 roboto-bold-west-side-16px">
+                                            <%=Days[i]%><br />
+                                                <%=Dat[i] %>
+                                        </div>
+                                        <div class="cal-pill">
+                                            <div class="ellipse-10"></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="flex-col-5">
+                                    <% } %>
+                                        <!-- <div class="flex-col-5">
                                     <div class="mon-20 roboto-black-japanese-laurel-20px">MON<br />20</div>
                                     <div class="cal-pill-1">
                                         <div class="ellipse-10-1"></div>
@@ -130,7 +135,7 @@
                                     <div class="cal-pill">
                                         <div class="ellipse-10"></div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <img class="vector-7" src="/img/vector-47@2x.svg" alt="Vector" />
                         </div>

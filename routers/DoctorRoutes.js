@@ -30,10 +30,16 @@ router.get('/:id', IsLoggedIn, async(req, res) => { // Doctor Portal
     const Title = "Home";
     const CssLink = 'Doctor-Portal';
     const { id } = req.params;
-    const date = new Date();
     const Month = date.getMonth();
     const Year = date.getFullYear();
-    const MonthName = calendar.month_name[Month + 1]
+    const MonthName = calendar.month_name[Month + 1 % 12]
+    const Dat = [];
+    Days = []
+    for (let i = -3; i < 4; i++) {
+        const Dates = calendar.weekday(Year, Month + 1 % 12, (date.getDate() + i % 7))
+        Dat.push(date.getDate() + i);
+        Days.push(calendar.day_name[(Dates)]);
+    }
     const Doctor = await DoctorModel.findById(id).populate('PatientId').populate('UserDetails');
     res.render('Doctor/Doctor-Portal', { Title, CssLink, Doctor, MonthName, Year });
 });

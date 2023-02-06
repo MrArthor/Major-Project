@@ -37,7 +37,6 @@ router.post('/log-in', async(req, res) => { // Log In Page
 
     const User = await UserModel.findOne({ username: req.body.Signin.username });
     const annswer = bcrypt.compareSync(req.body.Signin.password, User.Password); // true
-    console.log(annswer);
     if (annswer) {
         req.session.user = User;
         if (User.Type == 'Doctor') {

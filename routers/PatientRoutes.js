@@ -43,10 +43,17 @@ router.get('/:id', IsLoggedIn, async(req, res) => { // Patient Portal
     const Month = date.getMonth();
     const Year = date.getFullYear();
     const MonthName = calendar.month_name[Month + 1 % 12]
+    const Dat = [];
+    Days = []
+    for (let i = -3; i < 4; i++) {
+        const Dates = calendar.weekday(Year, Month + 1 % 12, (date.getDate() + i % 7))
+        Dat.push(date.getDate() + i);
+        Days.push(calendar.day_name[(Dates)]);
+    }
     const CssLink = 'patient-portal'
     const PatientId = req.params.id;
     const Patient = await PatientModel.findById(PatientId).populate('UserDetails').populate('Doctor').populate('Volunteer').populate('Emr');
-    res.render('Patient/Patient-Portal', { Title, CssLink, Patient, MonthName, Year }) // Rendering Patient Portal
+    res.render('Patient/Patient-Portal', { Title, CssLink, Patient, MonthName, Year, Dat, Days }) // Rendering Patient Portal
 })
 
 router.get('/:id/vitals-edit-form', IsLoggedIn, async(req, res) => { // Vitals Edit Form
@@ -79,12 +86,25 @@ router.get('/:id/patient-portal-emr', IsLoggedIn, async(req, res) => { // Patien
     res.render('Patient/patient-portal-emr', { Title, CssLink, Patient }) // Rendering Patient Portal EMR
 })
 
-router.get('/:id/patient-portal-calendar', IsLoggedIn, async(req, res) => { // Patient Portal Calendar
+router.get('/:id/patient-portal-calendar', async(req, res) => { // Patient Portal Calendar
+    const date = new Date();
+    const Month = date.getMonth();
+    const Year = date.getFullYear();
+    const MonthName = calendar.month_name[Month + 1 % 12]
+    const Dat = new calendar.Calendar().itermonthdays(Year, Month + 1);
+
+
+    console.log(Dat)
+    Days = []
+    for (let i = 0; i < 7; i++) {
+        Days.push(calendar.day_name[i % 7]);
+    }
+
     const Title = "Patient Portal Calendar";
     const CssLink = 'patient-portal-calendar'
     const PatientId = req.params.id;
     const Patient = await PatientModel.findById(PatientId).populate('UserDetails').populate('Doctor').populate('Volunteer').populate('Emr');
-    res.render('Patient/patient-portal-calendar', { Title, CssLink, Patient }) // Rendering Patient Portal Calendar
+    res.render('Patient/patient-portal-calendar', { Title, CssLink, Patient, MonthName, Year, Days, Dat }) // Rendering Patient Portal Calendar
 })
 
 router.get('/:id/patient-portal-feedback', IsLoggedIn, async(req, res) => { // Patient Portal Feedback

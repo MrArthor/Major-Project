@@ -37,6 +37,7 @@ const seedDB = async() => {
         const Users = new UserModel({
             //YOUR USER ID
             username: User[i].username,
+            FullName: User[i].Namme,
             ContactNumber: User[i].ContactNumber,
             Address: User[i].Address,
             Type: Type[i % 3],

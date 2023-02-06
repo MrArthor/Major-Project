@@ -6,7 +6,10 @@
             <div class="overlap-group33">
                 <div class="overlap-group4">
                     <div class="overlap-group7">
-                        <div class="november-2022 roboto-bold-black-squeeze-24px">NOVEMBER, 2022</div>
+                        <div class="november-2022 roboto-bold-black-squeeze-24px">
+                            <%=MonthName %> ,
+                                <%=Year %>
+                        </div>
                         <img class="vector" src="/img/vector-236@2x.svg" alt="Vector" />
                         <img class="vector-1" src="/img/vector-237@2x.svg" alt="Vector" />
                     </div>
@@ -15,22 +18,24 @@
                             <div class="flex-row-2">
                                 <div class="flex-row-3">
                                     <div class="flex-col">
-                                        <div class="place roboto-bold-metallic-seaweed-16px">SUN</div>
-                                        <div class="number roboto-bold-yellow-orange-16px">1</div>
-                                        <div class="number roboto-bold-yellow-orange-16px">8</div>
-                                        <div class="number-1 roboto-bold-la-palma-16px">15</div>
-                                        <div class="number-1 roboto-bold-yellow-orange-16px">22</div>
-                                        <div class="number-1 roboto-bold-yellow-orange-16px">29</div>
+                                        <%for (i in Days){%>
+                                            <div class="place roboto-bold-metallic-seaweed-16px">
+                                                <%=Days[i]%>
+                                            </div>
+                                            <%}%>
+
                                     </div>
+
+
                                     <div class="flex-col-1">
-                                        <div class="mon roboto-bold-metallic-seaweed-16px">MON</div>
-                                        <div class="number-2 roboto-bold-yellow-orange-16px">2</div>
-                                        <div class="number-2 roboto-bold-yellow-orange-16px">9</div>
-                                        <div class="overlap-group8">
-                                            <div class="number-3 roboto-bold-white-16px">16</div>
-                                        </div>
-                                        <div class="number-5 roboto-bold-yellow-orange-16px">23</div>
-                                        <div class="number-6 roboto-bold-yellow-orange-16px">30</div>
+                                        <!-- <div class="mon roboto-bold-metallic-seaweed-16px">MON</div> -->
+                                        <%for(i in Dat){ if(i==7) break%>
+                                            <div class="number-2 roboto-bold-yellow-orange-16px">
+                                                <% if(i<=7) %>
+                                                    <%=Dat[i]%>
+                                            </div>
+                                            <% } %>
+
                                     </div>
                                 </div>
                                 <div class="flex-col-2">
