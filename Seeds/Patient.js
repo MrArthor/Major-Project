@@ -18,6 +18,7 @@ db.once("open", () => {
 
 // console.log(Data);
 const seedDB = async() => {
+    const Doctor = await DoctorModel.find({});
     await PatientModel.deleteMany({});
     const Users = await UserModel.find({});
     const Doctors = await DoctorModel.find({});
@@ -38,7 +39,9 @@ const seedDB = async() => {
             Height: Data[i].noofpatient % 30,
         })
         await Patient.save();
+        Doctor[i].Patients.push(Patient);
     }
+
 }
 
 seedDB().then(() => {
