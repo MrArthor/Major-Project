@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const PatientModel = require('../models/PatientModel');
 const UserModel = require('../models/UserModel');
 const DoctorModel = require('../models/DoctorModel');
+const encrypt = require('mongoose-encryption');
+
 const VolunteerModel = require('../models/VolunteerModel');
 const User = require('./usermodel.js');
 const bcrypt = require('bcrypt');
@@ -65,7 +67,12 @@ const seedDB = async() => {
         await Users.save();
     }
 }
+func = async() => {
+    const user = await UserModel.find({});
+    console.log(user);
+}
+seedDB().then(async() => {
+    await func();
 
-seedDB().then(() => {
     mongoose.connection.close();
-})
+});

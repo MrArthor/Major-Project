@@ -4,6 +4,8 @@ const Data = require('./MOCK_DATA.js');
 const Sex = require('./Sex');
 const UserModel = require('../models/UserModel');
 const DoctorModel = require('../models/DoctorModel');
+mongoose.set('strictQuery', true);
+
 mongoose.connect('mongodb://localhost:27017/MajorProject', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -39,7 +41,7 @@ const seedDB = async() => {
             Height: Data[i].noofpatient % 30,
         })
         await Patient.save();
-        Doctor[i].Patients.push(Patient);
+        Doctors[i].PatientId.push(Patient._id);
     }
 
 }
