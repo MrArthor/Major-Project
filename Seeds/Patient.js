@@ -6,7 +6,7 @@ const UserModel = require('../models/UserModel');
 const DoctorModel = require('../models/DoctorModel');
 mongoose.set('strictQuery', true);
 
-mongoose.connect('mongodb://localhost:27017/MajorProject', {
+mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

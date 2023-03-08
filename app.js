@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect("mongodb://localhost:27017/MajorProject", {
+mongoose.connect("mongodb://127.0.0.1:27017/MajorProject", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

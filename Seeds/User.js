@@ -10,7 +10,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 mongoose.set('strictQuery', true);
 
-mongoose.connect('mongodb://localhost:27017/MajorProject', {
+mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -51,6 +51,7 @@ const seedDB = async() => {
         if (i % 3 == 0) {
             Patient[Pa].UserDetails = Users._id;
             await Patient[Pa].save();
+            console.log(Patient[Pa]);
             Pa++;
         }
         if (i % 3 == 1) {
@@ -67,12 +68,8 @@ const seedDB = async() => {
         await Users.save();
     }
 }
-func = async() => {
-    const user = await UserModel.find({});
-    console.log(user);
-}
+
 seedDB().then(async() => {
-    await func();
 
     mongoose.connection.close();
 });

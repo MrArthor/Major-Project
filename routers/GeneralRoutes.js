@@ -39,11 +39,14 @@ router.post('/log-in', async(req, res) => { // Log In Page
     const annswer = bcrypt.compareSync(req.body.Signin.password, User.Password); // true
     if (annswer) {
         req.session.user = User;
+        // console.log(User);
         if (User.Type == 'Doctor') {
             const Doctor = await DoctorModel.findOne({ UserDetails: User._id });
             res.redirect('/Doctor/' + Doctor._id);
         } else if (User.Type == 'Patient') {
-            const Patient = await PatientModel.findOne({ UserDetails: User._id });
+            const Patient = await PatientModel.findOne({ UserDetails: User._id }).exec();
+            console.log(User._id);
+            console.log(Patient);
             res.redirect('/Patient/' + Patient._id);
         } else if (User.Type == 'Volunteer') {
             const Volunteer = await VolunteerModel.findOne({ UserDetails: User._id });

@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const DoctorModel = require('../models/DoctorModel');
 const Data = require('./MOCK_DATA.js');
 const UserModel = require('../models/UserModel');
-mongoose.connect('mongodb://localhost:27017/MajorProject', {
+mongoose.set('strictQuery', false);
+mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
