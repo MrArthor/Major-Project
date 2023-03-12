@@ -43,5 +43,5 @@ const PatientSchema = new Schema({
 var encKey = "YZO/FMmNdjnVeSl7Ixjcwzff5Ajt2hinRUfWns3r52I=";
 var sigKey = "x+paVEpKTXmZ6B3vCXVcRQtnXU0mWlakLMsokVUDbLcByNN0nPgKgDar68IfcMjuSdnSFhx2IMmkBfacCgMxDQ==";
 
-PatientSchema.plugin(encrypt, { encryptionKey: encKey, signingKey: sigKey });
+PatientSchema.plugin(encrypt, { encryptionKey: encKey, signingKey: sigKey, excludeFromEncryption: ['UserDetails'] }, );
 module.exports = mongoose.model('PatientModel', PatientSchema);

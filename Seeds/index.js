@@ -17,12 +17,10 @@ db.once("open", () => {
 
 const sample = array => array[Math.floor(Math.random() * array.length)];
 
-// console.log(Data);
 const seedDB = async() => {
     await DoctorModel.deleteMany({});
     mongoose.set('strictQuery', true);
 
-    //  const Users = await UserModel.find({});
     for (let i = 0; i < 10; i++) {
 
         const doctor = new DoctorModel({

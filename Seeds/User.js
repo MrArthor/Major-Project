@@ -21,7 +21,6 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
     console.log("Database connected");
 });
-// console.log(Data);
 const Type = ["Patient", "Doctor", "Volunteer"];
 const seedDB = async() => {
     const Patient = await PatientModel.find({});
@@ -48,10 +47,11 @@ const seedDB = async() => {
             Password: hash
 
         })
+        await Users.save();
+
         if (i % 3 == 0) {
             Patient[Pa].UserDetails = Users._id;
             await Patient[Pa].save();
-            console.log(Patient[Pa]);
             Pa++;
         }
         if (i % 3 == 1) {
@@ -59,13 +59,7 @@ const seedDB = async() => {
             await Doctor[Do].save();
             Do++;
         }
-        // if (i % 3 == 2) {
-        //     Volunteer[Vo].UserDetails = Users._id;
-        //     await Volunteer[Vo].save();
-        //     Vo++;
-        // }
 
-        await Users.save();
     }
 }
 

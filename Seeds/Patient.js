@@ -18,11 +18,9 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-// console.log(Data);
 const seedDB = async() => {
     const Doctor = await DoctorModel.find({});
     await PatientModel.deleteMany({});
-    const Users = await UserModel.find({});
     const Doctors = await DoctorModel.find({});
     for (let i = 0; i < 10; i++) {
 
@@ -42,6 +40,7 @@ const seedDB = async() => {
         })
         await Patient.save();
         Doctors[i].PatientId.push(Patient._id);
+        await Doctors[i].save();
     }
 
 }

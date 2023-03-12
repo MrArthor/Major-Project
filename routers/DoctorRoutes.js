@@ -61,7 +61,6 @@ router.post('/:id/vitals-edit-form-doc', IsLoggedIn, async(req, res) => { // Vit
     Doctor.Temperature = temp;
     Doctor.PulseRate = pulse;
     await Doctor.save();
-    console.log(Doctor)
     res.render('Doctor/vitals-edit-form-doc', { Title, CssLink, Doctor }); // Rendering Vitals Edit Form
 });
 
@@ -137,7 +136,6 @@ router.post('/:id/doctor-portal-feedback', IsLoggedIn, async(req, res) => { // D
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
     const DocFeedback = req.body.DocFeed;
-    console.log(DocFeedback);
     const Feedback = new FeedbackModel({
 
         FullName: DocFeedback.fullname,

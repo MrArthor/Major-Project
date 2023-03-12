@@ -39,14 +39,13 @@ router.post('/log-in', async(req, res) => { // Log In Page
     const annswer = bcrypt.compareSync(req.body.Signin.password, User.Password); // true
     if (annswer) {
         req.session.user = User;
-        // console.log(User);
+
         if (User.Type == 'Doctor') {
             const Doctor = await DoctorModel.findOne({ UserDetails: User._id });
             res.redirect('/Doctor/' + Doctor._id);
         } else if (User.Type == 'Patient') {
-            const Patient = await PatientModel.findOne({ UserDetails: User._id }).exec();
-            console.log(User._id);
-            console.log(Patient);
+            const Patient = await PatientModel.findOne({ UserDetails: User._id });
+
             res.redirect('/Patient/' + Patient._id);
         } else if (User.Type == 'Volunteer') {
             const Volunteer = await VolunteerModel.findOne({ UserDetails: User._id });
@@ -65,7 +64,6 @@ router.get('/sign-up', (req, res) => { // Sign Up Page
 router.post('/sign-up', async(req, res) => { // Sign Up Page Post Request
     //const Title = "Sign Up";
     const temp = req.body.Signup;
-    console.log(temp);
     const User = new UserModel(req.body.Signup);
     bcrypt.genSalt(saltRounds, function(err, salt) {
         bcrypt.hash(myPlaintextPassword, salt, function(err, hash) {
@@ -73,7 +71,6 @@ router.post('/sign-up', async(req, res) => { // Sign Up Page Post Request
         });
     });
     await User.save();
-    console.log(temp);
     if (temp.Type == "Doctor")
         res.redirect('/Doctor/add-doctor');
     else if (temp.Type == "Patient")
