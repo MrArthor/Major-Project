@@ -183,8 +183,8 @@ router.get('/:id/mental-health-form', IsLoggedIn, async(req, res) => { // Mental
 
 
 router.post('/:id/mental-health-form', IsLoggedIn, async(req, res) => { // Mental Health Form Post Request
-    const Title = "Mental Health Test";
-    const CssLink = 'quiz-result'
+    const Title = "Mental Health Test"; // Mental Health Form
+    const CssLink = 'quiz-result'; // Mental Health Form
     const PatientId = req.params.id;
     const Patient = await PatientModel.findById(PatientId).populate('UserDetails').populate('Doctor').populate('Volunteer').populate('Emr');
     const mentalhealth = req.body.mentalhealth;
