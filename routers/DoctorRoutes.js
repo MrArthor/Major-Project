@@ -30,6 +30,8 @@ router.get('/:id', IsLoggedIn, async(req, res) => { // Doctor Portal
     const Title = "Home";
     const CssLink = 'Doctor-Portal';
     const { id } = req.params;
+    const date = new Date();
+
     const Month = date.getMonth();
     const Year = date.getFullYear();
     const MonthName = calendar.month_name[Month + 1 % 12]
@@ -72,14 +74,13 @@ router.get('/:id/doctor-portal-settings', IsLoggedIn, async(req, res) => { // Do
 
     res.render('Doctor/doctor-portal-settings', { Title, CssLink, Doctor }); // Rendering Doctor Portal Settings
 });
-router.get('/:id/doctor-portal-calendar', IsLoggedIn, async(req, res) => { // Doctor Portal Calendar
+router.get('/:id/doctor-portal-calendar', async(req, res) => { // Doctor Portal Calendar
     const Title = "Calendar";
     const CssLink = 'Doctor-Portal-Calendar';
     const DoctorId = req.params.id;
     const Doctor = await DoctorModel.findById(DoctorId).populate('PatientId').populate('UserDetails');
 
-    res
-        .render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor }); // Rendering Doctor Portal Calendar
+    res.render('Doctor/doctor-portal-calendar', { Title, CssLink, Doctor }); // Rendering Doctor Portal Calendar
 });
 
 
@@ -94,7 +95,7 @@ router.get('/:id/doctor-portal-patient-individual', IsLoggedIn, async(req, res) 
     res.render('Doctor/doctor-portal-patient-individual', { Title, CssLink, Doctor, Patient }); // Rendering Doctor Portal Patient Individual
 });
 
-router.get('/:id/doctor-portal-patient-list', IsLoggedIn, async(req, res) => { // Doctor Portal Patient List
+router.get('/:id/doctor-portal-patient-list', async(req, res) => { // Doctor Portal Patient List
 
     const Title = "Patient List";
     const CssLink = 'Doctor-Portal-Patient-List';
