@@ -21,15 +21,15 @@
             <div class="flex-row">
                 <div class="sidebar-doc">
                     <div class="ml-care roboto-black-black-squeeze-24px">ML<br />CARE</div>
-                    <a href="Doctor/doctor-portal-standard"><img class="home" src="/img/home@2x.svg" alt="home" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/"><img class="home" src="/img/home@2x.svg" alt="home" /> </a>
                     <div class="overlap-group1">
-                        <a href="Doctor/doctor-portal-patient-list-hover"><img class="vector" src="/img/vector@2x.svg" alt="Vector" />
+                        <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-patient-list-hover"><img class="vector" src="/img/vector@2x.svg" alt="Vector" />
                         </a>
                     </div>
-                    <a href="Doctor/doctor-portal-calendar"><img class="calendar" src="/img/calendar@2x.svg" alt="calendar" /> </a>
-                    <a href="Doctor/doctor-portal-feedback"><img class="feedback" src="/img/feedback@2x.svg" alt="feedback" /> </a>
-                    <a href="Doctor/doctor-portal-chat-choose"><img class="chat" src="/img/chat@2x.svg" alt="chat" /> </a>
-                    <a href="Doctor/doctor-portal-settings"><img class="setting" src="/img/setting@2x.svg" alt="setting" />
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-calendar"><img class="calendar" src="/img/calendar@2x.svg" alt="calendar" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-feedback"><img class="feedback" src="/img/feedback@2x.svg" alt="feedback" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-chat-choose"><img class="chat" src="/img/chat@2x.svg" alt="chat" /> </a>
+                    <a href="/Doctor/<%=Doctor._id  %>/doctor-portal-settings"><img class="setting" src="/img/setting@2x.svg" alt="setting" />
                     </a>
                 </div>
                 <div class="flex-col">
@@ -58,67 +58,72 @@
                             <div class="overlap-group">
                                 <div class="rectangle"></div>
                                 <img class="ellipse" src="/img/ellipse-14@2x.png" alt="Ellipse 14" />
-                                <div class="riyah roboto-bold-scooter-24px">Riyah</div>
+                                <div class="riyah roboto-bold-scooter-24px">
+                                    <%=Doctor.PatientId[0].UserDetails.FullName %>
+                                </div>
                                 <div class="confidential roboto-medium-yellow-orange-14px">Confidential</div>
                                 <a href="./doctor-portal-patient-individual">
                                     <div class="rectangle-1"></div>
                                 </a>
-                                <div class="view roboto-bold-black-squeeze-16px">View</div>
-                                <img class="view-1" src="/img/view@2x.svg" alt="view" />
+                                <div class="view roboto-bold-black-squeeze-16px">
+
+                                    <a href="/Doctor/<%=Doctor._id%>/doctor-portal-patient-indivisual/<%=Doctor.PatientId[0]._id %>"> View</a>
+                                </div>
+                                <img class=" view-1 " src="/img/view@2x.svg " alt="view " />
                             </div>
 
                         </div>
-                        <div class="overlap-group7">
-                            <div class="regular-normal-patients roboto-bold-black-squeeze-24px">REGULAR / NORMAL PATIENTS</div>
+                        <div class="overlap-group7 ">
+                            <div class="regular-normal-patients roboto-bold-black-squeeze-24px ">REGULAR / NORMAL PATIENTS</div>
                         </div>
-                        <div class="overlap-group-container-1">
-                            <div class="overlap-group">
-                                <div class="rectangle"></div>
-                                <img class="ellipse" src="/img/ellipse-14@2x.png" alt="Ellipse 14" />
-                                <div class="riyah roboto-bold-scooter-24px">Riyah</div>
-                                <div class="confidential roboto-medium-yellow-orange-14px">Confidential</div>
-                                <a href="./doctor-portal-patient-individual">
-                                    <div class="rectangle-1"></div>
+                        <div class="overlap-group-container-1 ">
+                            <div class="overlap-group ">
+                                <div class="rectangle "></div>
+                                <img class="ellipse " src="/img/ellipse-14@2x.png " alt="Ellipse 14 " />
+                                <div class="riyah roboto-bold-scooter-24px ">Riyah</div>
+                                <div class="confidential roboto-medium-yellow-orange-14px ">Confidential</div>
+                                <a href="./doctor-portal-patient-individual ">
+                                    <div class="rectangle-1 "></div>
                                 </a>
-                                <div class="view roboto-bold-black-squeeze-16px">View</div>
-                                <img class="view-1" src="/img/view@2x.svg" alt="view" />
+                                <div class="view roboto-bold-black-squeeze-16px ">View</div>
+                                <img class="view-1 " src="/img/view@2x.svg " alt="view " />
                             </div>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer">
-                <div class="flex-row-2">
-                    <div class="flex-row-3">
-                        <div class="flex-col-2">
-                            <div class="ml-care-1 roboto-black-white-96px">ML CARE</div>
-                            <div class="vector-container">
-                                <img class="vector-1" src="/img/vector-232@2x.svg" alt="Vector" />
-                                <img class="vector-2" src="/img/vector-233@2x.svg" alt="Vector" />
-                                <img class="vector-3" src="/img/vector-234@2x.svg" alt="Vector" />
+            <div class="footer ">
+                <div class="flex-row-2 ">
+                    <div class="flex-row-3 ">
+                        <div class="flex-col-2 ">
+                            <div class="ml-care-1 roboto-black-white-96px ">ML CARE</div>
+                            <div class="vector-container ">
+                                <img class="vector-1 " src="/img/vector-232@2x.svg " alt="Vector " />
+                                <img class="vector-2 " src="/img/vector-233@2x.svg " alt="Vector " />
+                                <img class="vector-3 " src="/img/vector-234@2x.svg " alt="Vector " />
                             </div>
                         </div>
-                        <div class="lorem-ipsum-container inter-medium-white-24px">
-                            <!-- <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div>
-                            <div class="lorem-ipsum">Lorem Ipsum</div> -->
+                        <div class="lorem-ipsum-container inter-medium-white-24px ">
+                            <!-- <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div>
+                            <div class="lorem-ipsum ">Lorem Ipsum</div> -->
                         </div>
                     </div>
-                    <div class="lorem-ipsum-container-1 inter-medium-white-24px">
-                        <!-- <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div>
-                        <div class="lorem-ipsum">Lorem Ipsum</div> -->
+                    <div class="lorem-ipsum-container-1 inter-medium-white-24px ">
+                        <!-- <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div>
+                        <div class="lorem-ipsum ">Lorem Ipsum</div> -->
                     </div>
                 </div>
             </div>

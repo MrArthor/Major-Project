@@ -40,21 +40,33 @@ app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'Public')))
 const SessionConfig = {
     secret: 'Thisshoudbebettersecret1',
+    // When set to false, this property does not save the session data if it hasn't changed since the last request. 
     resave: false,
+    // When set to true, a new and empty session is created and saved whenever a user visits the site.
     saveUninitialized: true,
+    // An object that contains various options related to the cookie set by the server
     cookie: {
+        // This boolean property indicates whether the cookie is only accessible through HTTP(S) protocol (not JavaScript)
         httpOnly: true,
+        // A date and time (in milliseconds) after which the cookie will no longer be valid
         expires: Date.now() + 1000 * 60 * 60 * 24,
+        // The maximum age of the cookie, also in milliseconds
         maxAge: 1000 * 60 * 60 * 24 * 1
     }
+
 }
 
 app.use(session(SessionConfig))
+
 app.use(Flash())
+
 app.use((req, res, next) => {
+    // This line creates a new property called "currentUser" on the response object (res.locals) and sets it equal to the value of the "user" property of the "session" object on the request object (req)
     res.locals.currentUser = req.session.user;
+    // These two lines create new properties called "success" and "error" on the response object (res.locals) and sets them equal to the values returned by calling the flash() method on the "success" and "error" keys of the "locals" object on the request object (req)
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
+    // This calls the "next()" function which tells the middleware function to move on to the next middleware function in the stack
     next();
 })
 
@@ -67,7 +79,6 @@ app.get("/", (req, res) => {
     const Title = "Home-Page";
     const CssLink = 'home-page'
     res.render('General/home-page', { Title, CssLink });
-
 });
 
 app.all('*', (req, res, next) => {

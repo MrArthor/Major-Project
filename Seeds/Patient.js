@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const PatientModel = require('../models/PatientModel');
+const PatientModel = require('../Models/PatientModel');
 const Data = require('./MOCK_DATA.js');
 const Sex = require('./Sex');
-const UserModel = require('../models/UserModel');
-const DoctorModel = require('../models/DoctorModel');
+const UserModel = require('../Models/UserModel');
+const DoctorModel = require('../Models/DoctorModel');
 mongoose.set('strictQuery', true);
 
 mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
@@ -40,6 +40,7 @@ const seedDB = async() => {
         })
         await Patient.save();
         Doctors[i].PatientId.push(Patient._id);
+        Doctors[i].NoOfPatients = Doctors[i].NoOfPatients + 1;
         await Doctors[i].save();
     }
 

@@ -6,16 +6,19 @@ const PatientModel = require('../Models/PatientModel'); // Importing Patient Mod
 const VolunteerModel = require('../Models/VolunteerModel'); // Importing Volunteer Model
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+
 router.get('/', (req, res) => { // Home Page
     const Title = "Home";
     const CssLink = 'home-page'
     res.render('General/home-page', { Title, CssLink });
 });
+
 router.get('/home-page', (req, res) => { // Home Page
     const Title = "Home";
     const CssLink = 'home-page'
     res.render('General/home-page', { Title, CssLink });
 });
+
 router.get('/about-us', (req, res) => { // About Us Page
     const Title = "About Us";
     const CssLink = 'about-us'
@@ -27,6 +30,7 @@ router.get('/contact-us', (req, res) => { // Contact Us Page
     const CssLink = 'contact-us'
     res.render('General/contact-us', { Title, CssLink });
 });
+
 router.get('/log-in', (req, res) => { // Log In Page
     const Title = "Log In";
     const CssLink = 'log-in'
@@ -56,11 +60,13 @@ router.post('/log-in', async(req, res) => { // Log In Page
 
     }
 });
+
 router.get('/sign-up', (req, res) => { // Sign Up Page
     const Title = "Sign Up";
     var CssLink = 'sign-up'
     res.render('General/sign-up', { Title, CssLink });
 });
+
 router.post('/sign-up', async(req, res) => { // Sign Up Page Post Request
     //const Title = "Sign Up";
     const temp = req.body.Signup;
@@ -86,8 +92,6 @@ router.get('/contact-us', (req, res) => { // Contact Us Page
     res.render('General/contact-us', { Title, CssLink });
 });
 
-// router.get('/Chat', (req, res) => {
-
 router.get('/Chat', async(req, res) => { // Chat Page
     // res.redirect('www.google.com');
     // res.redirect('https://google.com');
@@ -95,10 +99,10 @@ router.get('/Chat', async(req, res) => { // Chat Page
     res.redirect('http://localhost:5000/');
 });
 
-
 router.get('/LogOut', (req, res) => {
     console.log(req.session);
     req.session.destroy();
     res.redirect('/');
 });
+
 module.exports = router;
