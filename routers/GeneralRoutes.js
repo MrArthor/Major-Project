@@ -1,73 +1,80 @@
-const express = require('express'); // Importing Express
+const express = require("express"); // Importing Express
 const router = express.Router(); // Creating Router
-const UserModel = require('../Models/UserModel'); // Importing User Model
-const DoctorModel = require('../Models/DoctorModel'); // Importing Doctor Model
-const PatientModel = require('../Models/PatientModel'); // Importing Patient Model
-const VolunteerModel = require('../Models/VolunteerModel'); // Importing Volunteer Model
-const bcrypt = require('bcrypt');
+const UserModel = require("../Models/UserModel"); // Importing User Model
+const DoctorModel = require("../Models/DoctorModel"); // Importing Doctor Model
+const PatientModel = require("../Models/PatientModel"); // Importing Patient Model
+const VolunteerModel = require("../Models/VolunteerModel"); // Importing Volunteer Model
+const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-router.get('/', (req, res) => { // Home Page
+router.get("/", (req, res) => {
+    // Home Page
     const Title = "Home";
-    const CssLink = 'home-page'
-    res.render('General/home-page', { Title, CssLink });
+    const CssLink = "home-page";
+    res.render("General/home-page", { Title, CssLink });
 });
 
-router.get('/home-page', (req, res) => { // Home Page
+router.get("/home-page", (req, res) => {
+    // Home Page
     const Title = "Home";
-    const CssLink = 'home-page'
-    res.render('General/home-page', { Title, CssLink });
+    const CssLink = "home-page";
+    res.render("General/home-page", { Title, CssLink });
 });
 
-router.get('/about-us', (req, res) => { // About Us Page
+router.get("/about-us", (req, res) => {
+    // About Us Page
     const Title = "About Us";
-    const CssLink = 'about-us'
-    res.render('General/about-us', { Title, CssLink });
+    const CssLink = "about-us";
+    res.render("General/about-us", { Title, CssLink });
 });
 
-router.get('/contact-us', (req, res) => { // Contact Us Page
+router.get("/contact-us", (req, res) => {
+    // Contact Us Page
     const Title = "Contact Us";
-    const CssLink = 'contact-us'
-    res.render('General/contact-us', { Title, CssLink });
+    const CssLink = "contact-us";
+    res.render("General/contact-us", { Title, CssLink });
 });
 
-router.get('/log-in', (req, res) => { // Log In Page
+router.get("/log-in", (req, res) => {
+    // Log In Page
     const Title = "Log In";
-    const CssLink = 'log-in'
-    res.render('General/log-in', { Title, CssLink });
+    const CssLink = "log-in";
+    res.render("General/log-in", { Title, CssLink });
 });
 
-router.post('/log-in', async(req, res) => { // Log In Page
+router.post("/log-in", async(req, res) => {
+    // Log In Page
 
     const User = await UserModel.findOne({ username: req.body.Signin.username });
     const annswer = bcrypt.compareSync(req.body.Signin.password, User.Password); // true
     if (annswer) {
         req.session.user = User;
 
-        if (User.Type == 'Doctor') {
+        if (User.Type == "Doctor") {
             const Doctor = await DoctorModel.findOne({ UserDetails: User._id });
-            res.redirect('/Doctor/' + Doctor._id);
-        } else if (User.Type == 'Patient') {
+            res.redirect("/Doctor/" + Doctor._id);
+        } else if (User.Type == "Patient") {
             const Patient = await PatientModel.findOne({ UserDetails: User._id });
 
-            res.redirect('/Patient/' + Patient._id);
-        } else if (User.Type == 'Volunteer') {
+            res.redirect("/Patient/" + Patient._id);
+        } else if (User.Type == "Volunteer") {
             const Volunteer = await VolunteerModel.findOne({ UserDetails: User._id });
-            res.redirect('/Volunteer/' + Volunteer._id);
+            res.redirect("/Volunteer/" + Volunteer._id);
         }
     } else {
-        res.redirect('/log-in');
-
+        res.redirect("/log-in");
     }
 });
 
-router.get('/sign-up', (req, res) => { // Sign Up Page
+router.get("/sign-up", (req, res) => {
+    // Sign Up Page
     const Title = "Sign Up";
-    var CssLink = 'sign-up'
-    res.render('General/sign-up', { Title, CssLink });
+    var CssLink = "sign-up";
+    res.render("General/sign-up", { Title, CssLink });
 });
 
-router.post('/sign-up', async(req, res) => { // Sign Up Page Post Request
+router.post("/sign-up", async(req, res) => {
+    // Sign Up Page Post Request
     //const Title = "Sign Up";
     const temp = req.body.Signup;
     const User = new UserModel(req.body.Signup);
@@ -77,32 +84,30 @@ router.post('/sign-up', async(req, res) => { // Sign Up Page Post Request
         });
     });
     await User.save();
-    if (temp.Type == "Doctor")
-        res.redirect('/Doctor/add-doctor');
-    else if (temp.Type == "Patient")
-        res.redirect('/Patient/add-patient');
-    else if (temp.Type == "Volunteer")
-        res.redirect('/Volunteer/add-volunteer');
-
+    if (temp.Type == "Doctor") res.redirect("/Doctor/add-doctor");
+    else if (temp.Type == "Patient") res.redirect("/Patient/add-patient");
+    else if (temp.Type == "Volunteer") res.redirect("/Volunteer/add-volunteer");
 });
 
-router.get('/contact-us', (req, res) => { // Contact Us Page
+router.get("/contact-us", (req, res) => {
+    // Contact Us Page
     const Title = "Contact Us";
-    const CssLink = 'contact-us'
-    res.render('General/contact-us', { Title, CssLink });
+    const CssLink = "contact-us";
+    res.render("General/contact-us", { Title, CssLink });
 });
 
-router.get('/Chat', async(req, res) => { // Chat Page
+router.get("/Chat", async(req, res) => {
+    // Chat Page
     // res.redirect('www.google.com');
     // res.redirect('https://google.com');
     const Title = "Chat";
-    res.redirect('http://localhost:5000/');
+    res.redirect("http://localhost:5000/");
 });
 
-router.get('/LogOut', (req, res) => {
+router.get("/LogOut", (req, res) => {
     console.log(req.session);
     req.session.destroy();
-    res.redirect('/');
+    res.redirect("/");
 });
 
 module.exports = router;

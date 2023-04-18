@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
-const PatientModel = require('../Models/PatientModel');
-const Data = require('./MOCK_DATA.js');
-const Sex = require('./Sex');
-const UserModel = require('../Models/UserModel');
-const DoctorModel = require('../Models/DoctorModel');
-mongoose.set('strictQuery', true);
+const mongoose = require("mongoose");
+const PatientModel = require("../Models/PatientModel");
+const Data = require("./MOCK_DATA.js");
+const Sex = require("./Sex");
+const UserModel = require("../Models/UserModel");
+const DoctorModel = require("../Models/DoctorModel");
+mongoose.set("strictQuery", true);
 
-mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
+mongoose.connect("mongodb://127.0.0.1:27017/MajorProject", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
@@ -23,7 +23,6 @@ const seedDB = async() => {
     await PatientModel.deleteMany({});
     const Doctors = await DoctorModel.find({});
     for (let i = 0; i < 10; i++) {
-
         const Patient = new PatientModel({
             //YOUR USER ID
 
@@ -37,15 +36,14 @@ const seedDB = async() => {
             BloodGroup: Data[i].noofpatient % 100,
             Weight: Data[i].noofpatient % 200,
             Height: Data[i].noofpatient % 30,
-        })
+        });
         await Patient.save();
         Doctors[i].PatientId.push(Patient._id);
         Doctors[i].NoOfPatients = Doctors[i].NoOfPatients + 1;
         await Doctors[i].save();
     }
-
-}
+};
 
 seedDB().then(() => {
     mongoose.connection.close();
-})
+});

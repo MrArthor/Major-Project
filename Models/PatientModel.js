@@ -1,26 +1,26 @@
-const { required } = require('joi');
-const mongoose = require('mongoose');
+const { required } = require("joi");
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const UserModel = require('./UserModel');
-const DoctorModel = require('./DoctorModel');
-const VolunteerModel = require('./VolunteerModel');
-const encrypt = require('mongoose-encryption');
+const UserModel = require("./UserModel");
+const DoctorModel = require("./DoctorModel");
+const VolunteerModel = require("./VolunteerModel");
+const encrypt = require("mongoose-encryption");
 
 const PatientSchema = new Schema({
     UserDetails: {
         type: Schema.Types.ObjectId,
-        ref: 'UserModel',
+        ref: "UserModel",
         //required: true
     },
     PreHistory: String,
     Doctor: {
         type: Schema.Types.ObjectId,
-        ref: 'DoctorModel',
+        ref: "DoctorModel",
         // required: true
     },
     Volunteer: {
         type: Schema.Types.ObjectId,
-        ref: 'VolunteerModel',
+        ref: "VolunteerModel",
         // required: true
     },
     Status: String,
@@ -36,12 +36,17 @@ const PatientSchema = new Schema({
     Height: Number,
     Emr: {
         type: Schema.Types.ObjectId,
-        ref: 'EmrModel',
+        ref: "EmrModel",
         // required: true
     },
 });
 var encKey = "YZO/FMmNdjnVeSl7Ixjcwzff5Ajt2hinRUfWns3r52I=";
-var sigKey = "x+paVEpKTXmZ6B3vCXVcRQtnXU0mWlakLMsokVUDbLcByNN0nPgKgDar68IfcMjuSdnSFhx2IMmkBfacCgMxDQ==";
+var sigKey =
+    "x+paVEpKTXmZ6B3vCXVcRQtnXU0mWlakLMsokVUDbLcByNN0nPgKgDar68IfcMjuSdnSFhx2IMmkBfacCgMxDQ==";
 
-PatientSchema.plugin(encrypt, { encryptionKey: encKey, signingKey: sigKey, excludeFromEncryption: ['UserDetails'] }, );
-module.exports = mongoose.model('PatientModel', PatientSchema);
+PatientSchema.plugin(encrypt, {
+    encryptionKey: encKey,
+    signingKey: sigKey,
+    excludeFromEncryption: ["UserDetails"],
+});
+module.exports = mongoose.model("PatientModel", PatientSchema);

@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
-const DoctorModel = require('../models/DoctorModel');
-const Data = require('./MOCK_DATA.js');
-const UserModel = require('../models/UserModel');
-mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
+const mongoose = require("mongoose");
+const DoctorModel = require("../models/DoctorModel");
+const Data = require("./MOCK_DATA.js");
+const UserModel = require("../models/UserModel");
+mongoose.set("strictQuery", false);
+mongoose.connect("mongodb://127.0.0.1:27017/MajorProject", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
@@ -15,14 +15,13 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-const sample = array => array[Math.floor(Math.random() * array.length)];
+const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async() => {
     await DoctorModel.deleteMany({});
-    mongoose.set('strictQuery', true);
+    mongoose.set("strictQuery", true);
 
     for (let i = 0; i < 10; i++) {
-
         const doctor = new DoctorModel({
             //YOUR USER ID
 
@@ -34,12 +33,12 @@ const seedDB = async() => {
             TestsScheduled: Data[i].noofpatient % 30,
             Department: Data[i].Qualification,
             BriefDescription: Data[i].Qualification,
-            Domain: Data[i].Domain
-        })
+            Domain: Data[i].Domain,
+        });
         await doctor.save();
     }
-}
+};
 
 seedDB().then(() => {
     mongoose.connection.close();
-})
+});

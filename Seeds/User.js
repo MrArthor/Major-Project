@@ -1,18 +1,18 @@
-const mongoose = require('mongoose');
-const PatientModel = require('../models/PatientModel');
-const UserModel = require('../models/UserModel');
-const DoctorModel = require('../models/DoctorModel');
-const encrypt = require('mongoose-encryption');
+const mongoose = require("mongoose");
+const PatientModel = require("../models/PatientModel");
+const UserModel = require("../models/UserModel");
+const DoctorModel = require("../models/DoctorModel");
+const encrypt = require("mongoose-encryption");
 
-const VolunteerModel = require('../models/VolunteerModel');
-const User = require('./usermodel.js');
-const bcrypt = require('bcrypt');
+const VolunteerModel = require("../models/VolunteerModel");
+const User = require("./usermodel.js");
+const bcrypt = require("bcrypt");
 const saltRounds = 10;
-mongoose.set('strictQuery', true);
+mongoose.set("strictQuery", true);
 
-mongoose.connect('mongodb://127.0.0.1:27017/MajorProject', {
+mongoose.connect("mongodb://127.0.0.1:27017/MajorProject", {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
@@ -44,9 +44,8 @@ const seedDB = async() => {
             Type: Type[i % 3],
             Name: User[i].Namme,
 
-            Password: hash
-
-        })
+            Password: hash,
+        });
         await Users.save();
 
         if (i % 3 == 0) {
@@ -59,11 +58,9 @@ const seedDB = async() => {
             await Doctor[Do].save();
             Do++;
         }
-
     }
-}
+};
 
 seedDB().then(async() => {
-
     mongoose.connection.close();
 });
