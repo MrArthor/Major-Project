@@ -13,19 +13,19 @@
                     <div class="navbar-link-products opensans-bold-white-16px">PRODUCTS</div>
                     <div class="navbar-link-services opensans-bold-white-16px">SERVICES</div>
                     <div class="navbar-link-contact-us opensans-bold-white-16px">CONTACT US</div>
-                    <a href="/sign-up">
-                        <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">SIGN UP/LOG IN</div>
+                    <a href="/logout">
+                        <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">Log Out</div>
                     </a>
                 </div>
             </div>
             <div class="flex-row">
                 <div class="sidebar-doc">
-                    <div class="ml-care roboto-black-black-squeeze-24px">ML<br />CARE</div>
+                    <!-- <div class="ml-care roboto-black-black-squeeze-24px">ML<br />CARE</div>
                     <a href="doctor-portal-standard"><img class="home" src="/img/home@2x.svg" alt="home" /> </a>
                     <div class="overlap-group1"><img class="vector-2" src="/img/vector-16@2x.svg" alt="Vector" /></div>
                     <a href="doctor-portal-calendar"><img class="calendar" src="/img/calendar@2x.svg" alt="calendar" /> </a>
                     <a href="doctor-portal-feedback"><img class="feedback" src="/img/feedback@2x.svg" alt="feedback" /> </a>
-                    <a href="doctor-portal-chat-choose"><img class="chat" src="/img/chat@2x.svg" alt="chat" /> </a><img class="setting" src="/img/setting@2x.svg" alt="setting" />
+                    <a href="doctor-portal-chat-choose"><img class="chat" src="/img/chat@2x.svg" alt="chat" /> </a><img class="setting" src="/img/setting@2x.svg" alt="setting" /> -->
                 </div>
                 <div class="flex-col">
                     <div class="flex-row-1">
@@ -46,8 +46,8 @@
                     <div class="flex-row-2">
                         <img class="ellipse-22" src="/img/ellipse-22@2x.png" alt="Ellipse 22" />
                         <div class="flex-col-2">
-                            <div class="alley-corac">ALLEY CORAC</div>
-                            <div class="medico-legal">Medico - Legal</div>
+                            <div class="alley-corac"><%=Patient.UserDetails.FullName %></div>
+                            <div class="medico-legal">Medico - <%=Patient.Type %></div>
                         </div>
                         <div class="overlap-group5">
                             <div class="emr">EMR</div>
@@ -62,24 +62,24 @@
                                 <div class="overlap-group">
                                     <div class="overlap-group-1"><img class="vector" src="/img/vector-15@2x.svg" alt="Vector" /></div>
                                     <div class="temperature roboto-bold-black-20px">TEMPERATURE</div>
-                                    <div class="x91-c roboto-black-west-side-32px">91 C</div>
+                                    <div class="x91-c roboto-black-west-side-32px"><%=Patient.Temperature %> C</div>
                                 </div>
                                 <div class="overlap-group">
                                     <div class="overlap-group1-1"><img class="vector-3" src="/img/vector-50@2x.svg" alt="Vector" /></div>
                                     <div class="blood-pressure roboto-bold-black-20px">BLOOD PRESSURE</div>
-                                    <div class="x91-c-1 roboto-black-west-side-32px">91 C</div>
+                                    <div class="x91-c-1 roboto-black-west-side-32px"><%=Patient.BloodPressure %></div>
                                 </div>
                             </div>
                             <div class="overlap-group-container-1">
                                 <div class="overlap-group">
                                     <div class="overlap-group12"><img class="vector" src="/img/vector-15@2x.svg" alt="Vector" /></div>
                                     <div class="pulse-rate roboto-bold-black-20px">PULSE RATE</div>
-                                    <div class="x91-c-2 roboto-black-west-side-32px">91 C</div>
+                                    <div class="x91-c-2 roboto-black-west-side-32px"><%=Patient.PulseRate %></div>
                                 </div>
                                 <div class="overlap-group10">
                                     <div class="overlap-group2"><img class="vector-4" src="/img/vector-51@2x.svg" alt="Vector" /></div>
                                     <div class="sugar roboto-bold-black-20px">SUGAR</div>
-                                    <div class="x91-c-3 roboto-black-west-side-32px">91 C</div>
+                                    <div class="x91-c-3 roboto-black-west-side-32px"><%=Patient.BloodSugar %></div>
                                 </div>
                             </div>
                         </div>
@@ -87,13 +87,20 @@
                     <div class="overlap-group6">
                         <div class="rectangle"></div>
                         <img class="vector-1" src="/img/vector-4@2x.svg" alt="Vector" />
+                        <div class="current-medication roboto-bold-black-squeeze-24px">Pre&nbsp;&nbsp;History</div>
+                        
+                    </div> 
+                    <%=Patient.PreHistory %>
+                    <div class="overlap-group6">
+                        <div class="rectangle"> </div>
+                        <img class="vector-1" src="/img/vector-4@2x.svg" alt="Vector" />
                         <div class="current-medication roboto-bold-black-squeeze-24px">CURRENT&nbsp;&nbsp;MEDICATION</div>
-                    </div>
+                    </div> <%=Patient.Medication %>
                     <div class="overlap-group4">
                         <div class="rectangle"></div>
                         <div class="current-treatment roboto-bold-black-squeeze-24px">CURRENT&nbsp;&nbsp;TREATMENT</div>
                         <img class="vector-1" src="/img/vector-4@2x.svg" alt="Vector" />
-                    </div>
+                    </div> <%=Patient.CurrentTreatment %>
                 </div>
             </div>
             <div class="footer">

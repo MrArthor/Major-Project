@@ -96,7 +96,7 @@ router.get("/:id/doctor-portal-settings", IsLoggedIn, async(req, res) => {
 
     res.render("Doctor/doctor-portal-settings", { Title, CssLink, Doctor }); // Rendering Doctor Portal Settings
 });
-router.get("/:id/doctor-portal-calendar", async(req, res) => {
+router.get("/:id/doctor-portal-calendar",IsLoggedIn, async(req, res) => {
     // Doctor Portal Calendar
     const Title = "Calendar";
     const CssLink = "Doctor-Portal-Calendar";
@@ -131,7 +131,7 @@ router.get(
     }
 );
 
-router.get("/:id/doctor-portal-patient-list", async(req, res) => {
+router.get("/:id/doctor-portal-patient-list",IsLoggedIn, async(req, res) => {
     // Doctor Portal Patient List
 
     const Title = "Patient List";
@@ -221,14 +221,14 @@ router.get("/:id/doctor-portal-chat-choose", IsLoggedIn, async(req, res) => {
 });
 
 router.get(
-    "/:id/doctor-portal-patient-indivisual/:PatientId",
+    "/:id/doctor-portal-patient-indivisual/:PatientId",IsLoggedIn,
     async(req, res) => {
         const Title = "Patient Individual";
         const CssLink = "Doctor-Portal-Patient-Individual";
         const DoctorId = req.params.id;
         const Doctor = await DoctorModel.findById(DoctorId).populate("UserDetails");
         const Patientid = req.params.PatientId;
-        const Patient = PatientModel.findById(Patientid).populate("UserDetails");
+        const Patient = await PatientModel.findById(Patientid).populate("UserDetails");
         res.render("Doctor/doctor-portal-patient-individual", {
             Title,
             CssLink,

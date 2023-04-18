@@ -29,13 +29,19 @@ const seedDB = async() => {
             Doctor: Doctors[i]._id,
             Age: Data[i].noofpatient % 20,
             Sex: Sex[i].Sex,
-            BloodPressure: Data[i].noofpatient % 100,
-            Temperature: Data[i].noofpatient % 100,
-            PulseRate: Data[i].noofpatient % 100,
-            BloodSugar: Data[i].noofpatient % 100,
-            BloodGroup: Data[i].noofpatient % 100,
-            Weight: Data[i].noofpatient % 200,
+            BloodPressure: Data[i].noofpatient % 89,
+            Temperature: Data[i].noofpatient %99,
+            PulseRate: Data[i].noofpatient % 180,
+            BloodSugar: Data[i].noofpatient % 199,
+            BloodGroup: Data[i].noofpatient % 190,
+            Weight: Data[i].noofpatient % 280,
             Height: Data[i].noofpatient % 30,
+            Type: "Patient Emergency",
+            PreHistory: "Patient has been suffering from fever for the past 3 days",
+            CurrentTreatment: "Patient is currently taking paracetamol",
+            Medication: "Patient is currently taking paracetamol",
+            ReportCount: 0,
+
         });
         await Patient.save();
         Doctors[i].PatientId.push(Patient._id);

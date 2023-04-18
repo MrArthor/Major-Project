@@ -14,11 +14,9 @@
                     <div class="navbar-link-products opensans-bold-white-16px">PRODUCTS</div>
                     <div class="navbar-link-services opensans-bold-white-16px">SERVICES</div>
                     <div class="navbar-link-contact-us opensans-bold-white-16px">CONTACT US</div>
-                    <% if(!currentUser) {%>
-                        <a href="/sign-up">
-                            <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">SIGN UP/LOG IN</div>
+                        <a href="/logout">
+                            <div class="navbar-link-sign-uplog-in opensans-bold-white-16px">LOG OUT</div>
                         </a>
-                        <% } %>
                 </div>
             </div>
             <div class="flex-row">
@@ -141,24 +139,24 @@
                                     <img class="temperature" src="./img/temperature@2x.svg" alt="temperature" />
                                 </div>
                                 <div class="temperature-1 roboto-bold-black-20px">TEMPERATURE</div>
-                                <div class="x91-c-1 roboto-black-west-side-32px">91 C</div>
+                                <div class="x91-c-1 roboto-black-west-side-32px"><%=Patient.Temperature %> C</div>
                             </div>
                             <div class="overlap-group">
                                 <div class="overlap-group2"><img class="weight" src="/img/weight@2x.svg" alt="weight" /></div>
                                 <div class="weight-1 roboto-bold-black-20px">WEIGHT</div>
-                                <div class="address roboto-black-west-side-32px">55 Kg</div>
+                                <div class="address roboto-black-west-side-32px"><%=Patient.Weight %> Kg</div>
                             </div>
                         </div>
                         <div class="overlap-group-container">
                             <div class="overlap-group">
                                 <div class="overlap-group1-2"><img class="height" src="/img/height@2x.svg" alt="height" /></div>
                                 <div class="height-1 roboto-bold-black-20px">HEIGHT</div>
-                                <div class="address-1 roboto-black-west-side-32px">160 cm</div>
+                                <div class="address-1 roboto-black-west-side-32px"><%=Patient.Height %> cm</div>
                             </div>
                             <div class="overlap-group10">
                                 <div class="overlap-group3"><img class="water-bal" src="/img/water-bal@2x.svg" alt="water bal" /></div>
-                                <div class="water-balance roboto-bold-black-20px">WATER BALANCE</div>
-                                <div class="percent roboto-black-west-side-32px">42%</div>
+                                <div class="water-balance roboto-bold-black-20px">Blood Pressure</div>
+                                <div class="percent roboto-black-west-side-32px"><%=Patient.BloodPressure %></div>
                             </div>
                         </div>
                     </div>
