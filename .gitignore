@@ -9,6 +9,13 @@ lerna-debug.log*
 .sav
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+/Machine_Learning/Pneumonia Detection/chest_xray
+/Machine_Learning/Alzheimer Detection/Alzheimer_Dataset
+/Machine_Learning/Brain Tumor Detection/Brain Tumor Dataset
+/Machine_Learning/COVID Detection/COVID Dataset
+/Machine_Learning/Breast Cancer/data.csv
+/Machine_Learning/Diabetes/diabetes.csv
+/Machine_Learning/Heat Disease Detection/heart.csv
 
 # Runtime data
 pids

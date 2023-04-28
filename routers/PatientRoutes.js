@@ -128,7 +128,6 @@ router.get("/:id/patient-portal-calendar", async(req, res) => {
     const MonthName = calendar.month_name[Month + (1 % 12)];
     const Dat = new calendar.Calendar().itermonthdays(Year, Month + 1);
 
-    console.log(Dat);
     Days = [];
     for (let i = 0; i < 7; i++) {
         Days.push(calendar.day_name[i % 7]);
@@ -309,13 +308,10 @@ router.post("/:id/mental-health-form", IsLoggedIn, async(req, res) => {
     const sendrequest = await request(options) // Sending Request to Python Server
         .then(function(parsedBody) {
             // Getting Response from Python Server
-            // console.log(parsedBody);
             result = parsedBody["result"]; // Getting Result from Python Server
-            // console.log("Sum of Array from Python: ", result);
         })
         .catch(function(err) {
             // Error Handling
-            console.log(err); // Printing Error
         });
     res.render("General/quiz-result", { Title, CssLink, Patient, result }); // Rendering Quiz Result
     // res.redirect(`/Patient/${Patient._id}`);

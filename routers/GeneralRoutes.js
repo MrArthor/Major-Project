@@ -97,15 +97,11 @@ router.get("/contact-us", (req, res) => {
 });
 
 router.get("/Chat", async(req, res) => {
-    // Chat Page
-    // res.redirect('www.google.com');
-    // res.redirect('https://google.com');
-    const Title = "Chat";
-    res.redirect("http://localhost:5000/");
+        const Title = "Chat";
+    res.redirect("http://localhost:8000/");
 });
 
 router.get("/LogOut", (req, res) => {
-    console.log(req.session);
     req.session.destroy();
     res.redirect("/");
 });
