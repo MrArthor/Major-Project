@@ -41,22 +41,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "Public")));
 const SessionConfig = {
-    secret: "Thisshoudbebettersecret1",
-    // When set to false, this property does not save the session data if it hasn't changed since the last request.
+    secret: 'Thisshoudbebettersecret1',
     resave: false,
-    // When set to true, a new and empty session is created and saved whenever a user visits the site.
     saveUninitialized: true,
-    // An object that contains various options related to the cookie set by the server
     cookie: {
-        // This boolean property indicates whether the cookie is only accessible through HTTP(S) protocol (not JavaScript)
         httpOnly: true,
-        // A date and time (in milliseconds) after which the cookie will no longer be valid
-        expires: Date.now() + 1000 * 60 * 60 * 24,
-        // The maximum age of the cookie, also in milliseconds
-        maxAge: 1000 * 60 * 60 * 24 * 1,
-    },
-};
-
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+}
 app.use(session(SessionConfig));
 
 app.use(Flash());
