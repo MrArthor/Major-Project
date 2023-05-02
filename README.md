@@ -1,5 +1,5 @@
 # ML HealthCare  Management System
-## Imagine Cup Regional Submission By Team Creedorian
+## Major Project Submission Submission By Team Creedorian
 
 The Project ML care is a healthcare system, which makes the overall work of the hospital easier and
 provides better results in mental and women health-related fulfilled problems.
@@ -43,7 +43,7 @@ ML Care requires [Node.js](https://nodejs.org/) v10+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-cd Imagine-Cup-MIcrosoft-Team-Creedorian
+cd Major-Project
 npm i
 nodemon app.js
 ```
