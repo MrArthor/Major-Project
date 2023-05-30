@@ -1,5 +1,5 @@
 # ML HealthCare  Management System
-## Major Project Submission Submission By Team Creedorian
+## Major Project Submission Submission By Group Number 59  
 
 The Project ML care is a healthcare system, which makes the overall work of the hospital easier and
 provides better results in mental and women health-related fulfilled problems.
